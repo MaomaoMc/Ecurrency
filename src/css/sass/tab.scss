@@ -1,0 +1,60 @@
+ul.tabUl{
+    width: 100%;
+    background-color: #fafafa;
+    border-top: .005rem solid #00a8ff;
+    display: flex;
+    display: -webkit-flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    li{
+        width: .9375rem;
+        height: .49rem;
+        font-size: .1rem;
+        text-align: center;
+        line-height: .25rem;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #abbccd;
+        }
+        span.icon{
+            width: .19rem;
+            height: .19rem;
+            margin: .075rem auto 0;
+            background-size: 100% 100%;
+        }
+        span.js_icon{
+            background-image: url(../../img/icon_js.png);
+        }
+        span.kc_icon{
+            background-image: url(../../img/icon_kc.png);
+        }
+        span.jy_icon{
+            background-image: url(../../img/icon_jy.png);
+        }
+        span.my_icon{
+            background-image: url(../../img/icon_wode_nor.png);
+        }
+    }
+    li.active{
+        a{
+            color: #3c82ff;
+        }
+        span.js_icon{
+            background-image: url(../../img/icon_jishi_hot.png);
+        }
+        span.kc_icon{
+            background-image: url(../../img/icon_kuangchi_hot.png);
+        }
+        span.jy_icon{
+            background-image: url(../../img/icon_jiaoyi_hot.png);
+        }
+        span.my_icon{
+            background-image: url(../../img/icon_wode_nor.png);
+        }
+        
+    }
+} 

@@ -1,0 +1,22 @@
+.assetTotal {
+  width: 3.595rem;
+  height: 1.76rem;
+  background-image: url(../../img/bg_zichan.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: .1rem auto; }
+
+.account_menus {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 .15rem;
+  padding-bottom: .8rem; }
+  .account_menus div.menus_item {
+    width: 1.15rem;
+    text-align: center; }
+    .account_menus div.menus_item span.icon {
+      display: block;
+      width: .76rem;
+      height: .95rem;
+      background-size: 100% 100%;
+      margin: 0 auto; }

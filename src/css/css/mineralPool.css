@@ -1,0 +1,84 @@
+.pool_overview {
+  height: 1.265rem;
+  margin: .05rem 0;
+  background-image: url(../../img/bg_kuang_kuangji.png);
+  background-repeat: no-repeat;
+  background-size: 100%; }
+  .pool_overview div {
+    flex-grow: 1;
+    padding: .3rem .4rem; }
+    .pool_overview div p {
+      line-height: .2rem;
+      text-align: center; }
+    .pool_overview div p.fc_yellow {
+      line-height: .4rem; }
+
+.mineralItems {
+  flex-direction: column;
+  padding-bottom: .4rem;
+  margin-top: .1rem; }
+  .mineralItems li {
+    text-align: left;
+    border: .01rem solid #00a8ff;
+    border-radius: .05rem;
+    padding: .1rem;
+    margin-top: .1rem; }
+    .mineralItems li div {
+      flex-direction: row;
+      font-size: .12rem;
+      color: white; }
+      .mineralItems li div div {
+        flex-grow: 1; }
+        .mineralItems li div div img {
+          width: .43rem;
+          height: .43rem;
+          margin: .025rem 0 0; }
+        .mineralItems li div div p {
+          line-height: .25rem; }
+
+.dlgZtMessage {
+  width: 3.025rem;
+  height: 2.085rem;
+  background: url(../../img/bg_tanchuxinxi.png) no-repeat 100% 100%;
+  margin-left: -1.5225rem;
+  margin-top: -1rem; }
+  .dlgZtMessage ul {
+    flex-direction: column; }
+    .dlgZtMessage ul li {
+      color: white;
+      font-size: .16rem;
+      line-height: .4rem; }
+
+.dlgMessage {
+  width: 3.025rem;
+  height: 1.745rem;
+  background: url(../../img/bg_gerenxinxi.png) no-repeat 100% 100%;
+  margin-left: -1.5225rem;
+  margin-top: -1rem; }
+  .dlgMessage div {
+    font-size: .16rem;
+    color: white;
+    height: .22rem;
+    line-height: .22rem; }
+  .dlgMessage span {
+    display: inline-block; }
+  .dlgMessage span.label {
+    width: .47rem; }
+  .dlgMessage span.message {
+    width: 1.13rem;
+    text-indent: .05rem;
+    border: .01rem solid #00a8ff; }
+  .dlgMessage span.btn {
+    width: .43rem;
+    float: right;
+    background-color: #0e689d;
+    border: .01rem solid #00a8ff; }
+
+.warningDlg {
+  width: 2.17rem;
+  height: .35rem;
+  line-height: .35rem;
+  text-align: center;
+  border-radius: .1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-left: -1.085rem; }

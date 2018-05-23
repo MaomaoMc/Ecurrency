@@ -1,0 +1,318 @@
+@charset "UTF-8";
+div.priceItems {
+  width: 3.595rem;
+  height: 1.265rem;
+  margin: .15rem auto;
+  background-image: url(../../img/bg_kuang_kuangji.png);
+  background-size: 100%; }
+  div.priceItems div {
+    flex-grow: 1;
+    /* default 0 */ }
+  div.priceItems div.price {
+    line-height: .75rem;
+    text-indent: .35rem;
+    color: #ffde00; }
+  div.priceItems div.items {
+    color: white;
+    padding-top: .35rem; }
+    div.priceItems div.items p {
+      line-height: .3rem; }
+
+ul.deal_tab {
+  width: 3.09rem;
+  height: .365rem;
+  border: .01rem solid #00a8ff;
+  border-radius: .5rem;
+  margin: 0 auto; }
+  ul.deal_tab li {
+    flex-grow: 1;
+    /* default 0 */
+    text-align: center; }
+    ul.deal_tab li a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: white;
+      line-height: .365rem;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 80%, transparent 0);
+      background-size: .0275rem 100%; }
+  ul.deal_tab li:first-child a {
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem; }
+  ul.deal_tab li:last-child a {
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem; }
+  ul.deal_tab li.active a {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.075) 80%, transparent 0);
+    background-size: .0275rem 100%; }
+
+ul.guadanTab {
+  width: 100%;
+  height: .935rem;
+  background-color: #031d59;
+  border-top: .01rem solid #00a8ff;
+  border-bottom: .01rem solid #00a8ff; }
+  ul.guadanTab li {
+    flex-grow: 1;
+    height: .935rem;
+    text-align: center; }
+    ul.guadanTab li img {
+      width: .35rem;
+      height: .36rem;
+      margin: .2rem auto 0; }
+    ul.guadanTab li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: white; }
+  ul.guadanTab li:nth-child(2) {
+    border-left: .01rem solid #00a8ff; }
+
+/*点对点*/
+.ptpFrom {
+  padding: 0 .4rem; }
+  .ptpFrom ul {
+    flex-direction: column; }
+    .ptpFrom ul li {
+      height: .48rem;
+      line-height: .48rem;
+      font-size: .12rem;
+      border-bottom: .01rem solid #00a8ff; }
+      .ptpFrom ul li span {
+        display: inline-block;
+        width: .95rem;
+        color: #00a8ff; }
+      .ptpFrom ul li input {
+        border: none;
+        height: .3rem;
+        line-height: .3rem; }
+      .ptpFrom ul li input[placeholder], .ptpFrom ul li [placeholder], .ptpFrom ul li *[placeholder] {
+        color: rgba(255, 255, 255, 0.3) !important; }
+      .ptpFrom ul li ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: rgba(255, 255, 255, 0.3) !important; }
+
+ul.dealItems {
+  flex-direction: column;
+  padding: 0 .15rem;
+  margin-top: .15rem; }
+  ul.dealItems li {
+    padding: .19rem .27rem .11rem;
+    border: .01rem solid #00a8ff;
+    border-radius: .05rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.075) 50%, transparent 0);
+    background-size: .03rem 100%;
+    margin-top: .15rem; }
+    ul.dealItems li span.btn {
+      width: .9rem;
+      margin: 0 auto; }
+
+.records li span.btn, .dealItems li span.btn {
+  height: .24rem;
+  line-height: .24rem;
+  color: yellow;
+  border: 0.01rem solid yellow;
+  border-radius: .12rem;
+  background-color: rgba(255, 255, 0, 0.3); }
+
+.dealRecords {
+  width: 3.35rem;
+  height: 2.12rem;
+  border-radius: .1rem;
+  margin: .1rem auto;
+  position: relative; }
+  .dealRecords ul.tabs {
+    flex-direction: row;
+    width: 100%;
+    height: .4rem;
+    border-bottom: .01rem solid #00a8ff;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .dealRecords ul.tabs li {
+      flex-grow: 1;
+      color: white;
+      font-size: .14rem;
+      text-align: center; }
+      .dealRecords ul.tabs li a {
+        display: inline-block;
+        height: .39rem;
+        line-height: .39rem; }
+    .dealRecords ul.tabs li.active {
+      color: #00a8ff; }
+      .dealRecords ul.tabs li.active a {
+        border-bottom: .015rem solid #00a8ff; }
+  .dealRecords ul.records {
+    flex-direction: column;
+    padding: 0 .2rem;
+    overflow: hidden; }
+    .dealRecords ul.records li {
+      flex-grow: 1;
+      border-bottom: .01rem solid #00a8ff;
+      padding: .1rem;
+      position: relative; }
+      .dealRecords ul.records li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+        .dealRecords ul.records li a p {
+          line-height: .2rem; }
+      .dealRecords ul.records li span.btn {
+        width: .8rem;
+        position: absolute;
+        right: 0;
+        bottom: .1rem; }
+
+/*弹窗*/
+.dlgPayKj {
+  width: 3.025rem;
+  height: 1.735rem;
+  background-image: url(../../img/bg_tankuang.png);
+  margin-left: -1.5225rem;
+  margin-top: -1rem; }
+
+.dlgPayPwd {
+  width: 3.025rem;
+  height: 2.035rem;
+  background-image: url(../../img/bg_mima.png);
+  margin-left: -1.5225rem;
+  margin-top: -1rem; }
+  .dlgPayPwd input {
+    color: white; }
+
+.dialog {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%; }
+  .dialog .dlg_tit {
+    font-size: .18rem;
+    text-indent: .5rem;
+    height: .37rem;
+    line-height: .4rem; }
+  .dialog a.btn_close {
+    display: block;
+    width: .22rem;
+    height: .22rem;
+    position: absolute;
+    top: .15rem;
+    right: .11rem; }
+  .dialog .dlg_form {
+    padding: .05rem .275rem; }
+    .dialog .dlg_form p {
+      margin: .2rem 0; }
+    .dialog .dlg_form input {
+      width: 100%;
+      height: .29rem;
+      float: left;
+      margin-bottom: .1rem; }
+    .dialog .dlg_form span.btn {
+      width: .775rem;
+      height: .275rem;
+      text-align: center;
+      line-height: .275rem;
+      border-left: 0.005rem solid yellow;
+      background-color: #253970;
+      position: relative; }
+    .dialog .dlg_form span.btn::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: .08rem solid #151d2e;
+      border-left: .08rem solid transparent;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .dialog .fgtTradepass {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: .1rem; }
+    .dialog .fgtTradepass span {
+      float: right; }
+
+/*挂单*/
+.guadanItems {
+  text-align: center;
+  padding: 0 .18rem;
+  margin-top: .2rem;
+  text-align: center; }
+  .guadanItems .tip {
+    border: .01rem dashed #00a8ff;
+    border-radius: .05rem;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.075) 50%, transparent 0);
+    background-size: .03rem 100%;
+    text-align: center;
+    height: .3rem;
+    line-height: .3rem; }
+  .guadanItems .price_adjust div.unit_price {
+    /*单价*/
+    display: -webkit-flex;
+    display: flex;
+    height: .365rem;
+    line-height: .365rem;
+    padding: 0 .2rem; }
+    .guadanItems .price_adjust div.unit_price div {
+      width: 2.19rem;
+      border: .01rem solid #00a8ff;
+      border-radius: .5rem;
+      margin: 0 .1rem;
+      position: relative; }
+    .guadanItems .price_adjust div.unit_price .price_opt {
+      display: inline-block;
+      width: .415rem;
+      height: .355rem;
+      line-height: .3rem;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.075) 90%, transparent 0);
+      background-size: .03rem 100%;
+      position: absolute;
+      top: 0; }
+    .guadanItems .price_adjust div.unit_price .price_opt.price_down {
+      left: 0;
+      border-top-left-radius: .5rem;
+      border-bottom-left-radius: .5rem; }
+    .guadanItems .price_adjust div.unit_price .price_opt.price_up {
+      right: 0;
+      border-top-right-radius: .5rem;
+      border-bottom-right-radius: .5rem; }
+    .guadanItems .price_adjust div.unit_price input.price_ipt {
+      height: .335rem;
+      width: 1.36rem;
+      color: white;
+      text-align: center;
+      border: none;
+      position: absolute;
+      left: .415rem;
+      top: 0;
+      margin: 0 !important; }
+  .guadanItems .price_adjust .draft_opt {
+    height: .025rem;
+    border-radius: .025rem;
+    background-color: #a8c7e2;
+    margin-top: .2rem;
+    padding: 0 .2rem;
+    position: relative; }
+    .guadanItems .price_adjust .draft_opt .circle {
+      display: inline-block;
+      width: .16rem;
+      height: .16rem;
+      border-radius: .08rem;
+      background-color: white;
+      box-shadow: 0 0 .025rem white;
+      position: absolute;
+      top: -.08rem;
+      left: .1rem;
+      z-index: 100; }
+  .guadanItems .price_adjust input {
+    width: .71rem;
+    height: .26rem;
+    line-height: .3rem;
+    border-radius: .05rem;
+    margin: .2rem 0 .15rem; }
+  .guadanItems .price_adjust .notice a {
+    color: rgba(255, 255, 255, 0.4); }
+    .guadanItems .price_adjust .notice a img {
+      width: .13rem;
+      height: .13rem;
+      margin-right: .05rem;
+      vertical-align: text-top; }

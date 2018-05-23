@@ -1,0 +1,44 @@
+div.item{
+    height: 1.265rem;
+    margin: .05rem 0;
+    background-image: url(../../img/bg_kuang_kuangji.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    div.goodPic{
+        width: .8rem;
+         height: .8rem; 
+         background-size: 100% 100%;
+          margin: .2rem;
+    }
+    div.goodItem{
+        width: 2.32rem;
+        padding: .15rem 0;
+        position: relative;
+        h6{
+            line-height: .4rem;
+        }
+        p{
+            line-height: .2rem;
+            color: white;
+        }
+        .cart{
+            height: .245rem;
+            line-height: .245rem;
+            color: white;
+            background-color: rgba(255, 251, 2, 0.5);
+            border: .01rem solid #fffb02;
+            border-radius: .15rem;
+            padding: 0 .1rem;
+            position: absolute;
+            right: .19rem;
+            .cart_icon{
+                display: inline-block;
+                width: .12rem;
+                height: .115rem;
+                background-image: url(../../img/icon_goumai.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}

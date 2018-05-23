@@ -1,0 +1,101 @@
+.pool_overview{
+    height: 1.265rem;
+    margin: .05rem 0;
+    background-image: url(../../img/bg_kuang_kuangji.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    div{
+        flex-grow: 1;
+        padding: .3rem .4rem;
+        p{
+            line-height: .2rem;
+            text-align: center;
+        }
+        p.fc_yellow{
+            line-height: .4rem;
+        }
+    }
+}
+.mineralItems{
+    flex-direction: column;
+    padding-bottom: .4rem;
+    margin-top: .1rem;
+        li{
+            text-align: left;
+            border: .01rem solid #00a8ff;
+            border-radius: .05rem;
+            padding: .1rem;
+            margin-top: .1rem;
+            div{
+                flex-direction: row;
+                    font-size: .12rem;
+                color: white;
+                div{
+                    flex-grow: 1;
+                    img{
+                        width: .43rem;
+                        height: .43rem;
+                        margin: .025rem 0 0;
+                    }
+                    p{
+                        line-height: .25rem;
+                    }
+                }
+            }
+        }
+}
+.dlgZtMessage{
+    width: 3.025rem;
+    height: 2.085rem;
+    background: url(../../img/bg_tanchuxinxi.png) no-repeat 100% 100%;
+    margin-left: -1.5225rem;
+    margin-top: -1rem;
+    ul{
+        flex-direction: column;
+        li{
+            color: white;
+            font-size: .16rem;
+            line-height: .4rem;
+        }
+    }
+}
+.dlgMessage{
+    width: 3.025rem;
+    height: 1.745rem;
+    background: url(../../img/bg_gerenxinxi.png) no-repeat 100% 100%;
+    margin-left: -1.5225rem;
+    margin-top: -1rem;
+    div{
+        font-size: .16rem;
+        color: white;
+        height: .22rem;
+        line-height: .22rem;
+    }
+    span{
+        display: inline-block;
+        
+    }
+    span.label{
+        width: .47rem;
+    }
+    span.message{
+        width: 1.13rem;
+        text-indent: .05rem;
+        border: .01rem solid #00a8ff;
+    }
+    span.btn{
+        width: .43rem;
+        float: right;
+        background-color: #0e689d;
+        border: .01rem solid #00a8ff;
+    }
+}
+.warningDlg{
+    width: 2.17rem;
+    height: .35rem;
+    line-height: .35rem;
+    text-align: center;
+    border-radius: .1rem;
+    background-color: rgba(0, 0, 0, .6);
+    margin-left: -1.085rem;
+}

@@ -1,0 +1,45 @@
+{
+  "name": "jsd",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-react": "^3.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-watch": "^5.0.0",
+    "lrz": "^4.9.40",
+    "qr-image": "^3.2.0",
+    "query": "^0.2.0",
+    "react": "^16.3.2",
+    "react-cropper": "^1.0.1",
+    "react-dom": "^16.3.2",
+    "react-pullload": "^1.1.0",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "action-sheet": "^1.0.5",
+    "axios": "^0.18.0",
+    "clipboard": "^2.0.0",
+    "cloudinary": "^1.11.0",
+    "copy-to-clipboard": "^3.0.8",
+    "dropload": "^1.1.0",
+    "echarts": "^4.0.4",
+    "fetch": "^1.1.0",
+    "qrcode.react": "^0.8.0",
+    "qs": "^6.5.1",
+    "react-core-image-upload": "^2.2.3",
+    "react-dropzone": "^4.2.9",
+    "superagent": "^3.8.3",
+    "zepto": "^1.2.0"
+  },
+  "proxy": "http://syjsd.it8851.com/**"
+}

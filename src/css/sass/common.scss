@@ -1,0 +1,268 @@
+html, body{
+    width: 100%;
+    height: 100%;   
+    display: flex;
+    display: -webkit-flex;
+}
+html{
+    font-size: 625%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    // box-sizing: border-box;
+}
+body{
+    padding-top: .45rem;
+    padding-bottom: .5rem;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+.icon{
+    display: block;
+}
+#root{
+    width: 100%;
+}
+.over_hidden{
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}
+.f_lt{
+    float: left;
+}
+.f_rt{
+    float: right;
+}
+.f_flex{
+    display: -webkit-flex;
+    display: flex;
+}
+.inlineBlock{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+.verMiddle{
+    vertical-align: middle
+}
+/*宽度*/
+.w_750{
+    width: 3.75rem;
+}
+/*高度*/
+.h_80{
+    height: .4rem;
+}
+.bradius_5{
+    border-radius: 5px;
+}
+/*字体大小43*/
+.fz_12{
+    font-size: .06rem;
+}
+.fz_14{
+    font-size: .07rem;
+}
+.fz_18{
+    font-size: .09rem;
+}
+.fz_20{
+    font-size: .1rem;
+}
+.fz_22{
+    font-size: .11rem;
+}
+.fz_24{
+    font-size: .12rem;
+}
+.fz_26{
+    font-size: .13rem;
+}
+.fz_28{
+    font-size: .14rem;
+}
+.fz_30{
+    font-size: .15rem;
+}
+.fz_32{
+    font-size: .16rem;
+}
+.fz_60{
+    font-size: .3rem;
+}
+.fz_70{
+    font-size: .35rem;
+}
+/*颜色21232*/
+.fc_blue{  
+    color: #00a8ff;
+}
+.fc_white{
+    color: white;
+}
+.fc_yellow{
+    color: #ffde00;
+}
+.fc_gray{
+    color: rgba(255, 255, 255, .5);
+}
+.text_center{
+    text-align: center;
+}
+/*间距*/
+.mt_10{
+    margin-top: .05rem;
+}
+.mt_20{
+    margin-top: .1rem;
+}
+.mt_30{
+    margin-top: .15rem;
+}
+.mt_40{
+    margin-top: .2rem;
+}
+.mt_50{
+    margin-top: .25rem;
+}
+.mt_60{
+    margin-top: .3rem;
+}
+.mb_10{
+    margin-bottom: .05rem;
+}
+.mb_20{
+    margin-bottom: .1rem;
+}
+.mb_50{
+    margin-bottom: .25rem;
+}
+.mb_60{
+    margin-bottom: .3rem;
+}
+.mb_80{
+    margin-bottom: .4rem;
+}
+.mb_100{
+    margin-bottom: 1rem;
+}
+.ml_5{
+    margin-left: .025rem;
+}
+.ml_10{
+    margin-left: .05rem;
+}
+.ml_20{
+    margin-left: .1rem;
+}
+.ml_30{
+    margin-left: .15rem;
+}
+.ml_40{
+    margin-left: .2rem;
+}
+/*border*/
+.b_blue1{
+    border: .01rem solid #00a8ff;  //ie 安卓 1px 的border显示不出来
+}
+// /*表单3*/
+input{
+    background-color: transparent;
+}
+input[type="radio"]{
+    width: .215rem;
+    height: .215rem;
+}
+/*按钮*/
+span.btn{
+    display: inline-block;
+    text-align: center;
+}
+.btn_default{
+    background-color: rgba(255, 255, 255, .5);
+    color:white;
+    border-color: rgba(255, 255, 255, .5);
+    border-radius: .025rem;
+}
+.btn_primary, .register_btn:hover{
+    background-color: #00a8ff;
+    color:white;
+    border-color: #00a8ff;
+    border-radius: .025rem;
+}
+.btn_orange{
+    background-color: #f26c00;
+    color: white;
+    width: 1.08rem;
+    height: .28rem;
+    line-height: .28rem;
+    text-align: center;
+    font-size: .15rem;
+    border-radius: .14rem;
+}
+.btn_confirm, .btn_cancel{
+
+}
+.dialog{
+    z-index: 100;
+}
+.shadow{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.title{
+    width: 100%;
+    height: .45rem;
+    line-height: .45rem;
+    font-size: .15rem;
+    text-align: center;
+    color: white;
+    background-color: #031d59;
+    border-bottom: .01rem solid #00a8ff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    .arrow.back_arrow{
+        float: left;
+        vertical-align: bottom;
+        margin: .1rem .05rem;
+    }
+    .refresh{
+        display: inline-block;
+        width: .22rem;
+        height: .22rem;
+        float: right;
+        background-image: url("../../img/cion_shuaxin.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: .1rem .05rem;
+    }
+}
+/*箭头*/
+.arrow{
+    display: inline-block;
+    width: .16rem;
+    height: .24rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+}
+.arrow.back_arrow{
+    background-image: url("../../img/icon_fanhui.png");
+}
