@@ -1,32 +1,28 @@
 .pool_overview {
-  height: 1.265rem;
-  margin: .05rem 0;
-  background-image: url(../../img/bg_kuang_kuangji.png);
+  height: 2.57rem;
+  background-image: url(../../img/head_bg.png);
   background-repeat: no-repeat;
   background-size: 100%; }
-  .pool_overview div {
+  .pool_overview > div div {
     flex-grow: 1;
     padding: .3rem .4rem; }
-    .pool_overview div p {
+    .pool_overview > div div p {
       line-height: .2rem;
       text-align: center; }
-    .pool_overview div p.fc_yellow {
+    .pool_overview > div div p.fc_yellow {
       line-height: .4rem; }
 
 .mineralItems {
   flex-direction: column;
-  padding-bottom: .4rem;
-  margin-top: .1rem; }
+  padding: 0 .2rem; }
   .mineralItems li {
     text-align: left;
-    border: .01rem solid #00a8ff;
-    border-radius: .05rem;
+    background-color: #fff;
     padding: .1rem;
     margin-top: .1rem; }
     .mineralItems li div {
       flex-direction: row;
-      font-size: .12rem;
-      color: white; }
+      font-size: .12rem; }
       .mineralItems li div div {
         flex-grow: 1; }
         .mineralItems li div div img {
@@ -37,24 +33,42 @@
           line-height: .25rem; }
 
 .dlgZtMessage {
-  width: 3.025rem;
-  height: 2.085rem;
-  background: url(../../img/bg_tanchuxinxi.png) no-repeat 100% 100%;
+  width: 3.22rem;
+  height: 2.84rem;
+  background: url(../../img/bg_message.png) no-repeat 100% 100%;
   margin-left: -1.5225rem;
-  margin-top: -1rem; }
+  margin-top: -1.42rem; }
+  .dlgZtMessage > div {
+    padding-top: 1.3rem; }
   .dlgZtMessage ul {
     flex-direction: column; }
     .dlgZtMessage ul li {
-      color: white;
       font-size: .16rem;
-      line-height: .4rem; }
+      line-height: .3rem; }
+  .dlgZtMessage span {
+    display: inline-block; }
+  .dlgZtMessage span.label {
+    width: .47rem; }
+  .dlgZtMessage span.message {
+    width: 1.5rem;
+    text-indent: .1rem;
+    line-height: .2rem;
+    border: .01rem solid #ddd; }
+  .dlgZtMessage span.btn {
+    height: .24rem;
+    line-height: .24rem;
+    font-size: .12rem;
+    width: .43rem;
+    color: white;
+    background-color: #3c82ff;
+    float: right; }
 
 .dlgMessage {
-  width: 3.025rem;
-  height: 1.745rem;
-  background: url(../../img/bg_gerenxinxi.png) no-repeat 100% 100%;
+  width: 3.22rem;
+  height: 2.84rem;
+  background: url(../../img/bg_message.png) no-repeat 100% 100%;
   margin-left: -1.5225rem;
-  margin-top: -1rem; }
+  margin-top: -1.42rem; }
   .dlgMessage div {
     font-size: .16rem;
     color: white;
@@ -67,12 +81,12 @@
   .dlgMessage span.message {
     width: 1.13rem;
     text-indent: .05rem;
-    border: .01rem solid #00a8ff; }
+    border: .01rem solid #3c82ff; }
   .dlgMessage span.btn {
     width: .43rem;
     float: right;
     background-color: #0e689d;
-    border: .01rem solid #00a8ff; }
+    border: .01rem solid #3c82ff; }
 
 .warningDlg {
   width: 2.17rem;

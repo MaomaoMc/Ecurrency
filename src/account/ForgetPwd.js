@@ -10,7 +10,6 @@ class ForgetPwd extends Component {
         super(props);
         const hash = window.location.hash;
         let page_type;
-        // hash.indexOf("forgetLoginPwd") !== -1
         if(hash.indexOf("forgetLoginPwd") !== -1){
             page_type = 1;
         }else{
@@ -185,14 +184,14 @@ class ForgetPwd extends Component {
              <Title title={this.state.page_type === 1 ? "忘记登录密码" : "忘记交易密码"} code = {this.state.code}/>
             <div className="account_form fz_26">
                 <div>
-                    <label className="fc_white">手机号：</label>
+                    <label>手机号：</label>
                     <input type="text" name="" placeholder="手机号：" value = {this.state.phone} onChange = {e => {
                         this.handleInputChange({type: "phone", value: e.target.value})
                     }}/>
                 </div>
                 <div style={{borderColor: 'transparent'}}>
                     <div className="f_lt" style={{width: '2.24rem', margin: "0"}}>
-                        <label className="fc_white" style={{width: "30%"}}>验证码：</label>
+                        <label style={{width: "30%"}}>验证码：</label>
                         <input className="code" type="text" placeholder="验证码：" value = {this.state.code}  style={{width: "70%"}}  onChange = {e => {
                         this.handleInputChange({type: "code", value: e.target.value})
                     }}/>
@@ -202,7 +201,7 @@ class ForgetPwd extends Component {
                     }}>{countDown > 0 && countDown < 60 ? countDown + "s后重新发送" : countDown === 0 ? "重新发送" : "获取验证码"}</span>
                 </div>
                 <div>
-                    <label className="fc_white">新密码：</label>
+                    <label>新密码：</label>
                     <input type="password" placeholder="新密码：" maxLength = {page_type === 2 ? "6" : ""} value = {this.state.pass} onChange = {e => {
                         this.handleInputChange({type: "pass", value: e.target.value})
                     }} onBlur = {e => {
@@ -210,7 +209,7 @@ class ForgetPwd extends Component {
                     }}/>
                 </div>
                 <div>
-                    <label className="fc_white">重复密码：</label>
+                    <label>重复密码：</label>
                     <input type="password" placeholder="重复密码：" maxLength = {page_type === 2 ? "6" : ""} value = {this.state.repass} onChange = {e => {
                         this.handleInputChange({type: "repass", value: e.target.value})
                     }} onBlur = {e => {

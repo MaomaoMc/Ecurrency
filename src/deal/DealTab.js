@@ -8,7 +8,7 @@ class DealTab extends Component {
     render (){
         const hash = window.location.hash;
         return <div>
-            <ul className="deal_tab f_flex fz_30">
+            <ul className="deal_tab f_flex fz_30" style = {{marginTop: "-.55rem"}}>
                 <li className={hash === '#/deal' || hash === '#/deal/price' ? 'active' : ''} style={{ borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem'}}>
                     <Link to="/deal/price"><span>价格</span></Link>
                 </li>

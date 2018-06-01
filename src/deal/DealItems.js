@@ -63,43 +63,14 @@ class DealItems extends Component {
             })).then(re => {
                 const data = re.data;
                 const code = data.code;
-                if(code === 1){ //购买成功
-                    this.setState({
-                        dlgShow: false,
-                        warningDlgShow: true,
-                        warningText: "购买成功",
-                        tradePassPwd: ""
-                    }, function(){
-                        this.hanleWarningDlgTimer({code: code})
-                    })
-                }
-                else if(code === -4){ //支付密码不正确
-                    this.setState({
-                        warningDlgShow: true,
-                        warningText: "支付密码不正确",
-                        tradePassPwd: ""
-                    }, function(){
-                        this.hanleWarningDlgTimer()
-                    })
-                }
-                else if(code === -3){//如果jsd余额不足
-                    this.setState({
-                        dlgShow: false,
-                        warningDlgShow: true,
-                        warningText: "JSD余额不足",
-                        tradePassPwd: ""
-                    }, function(){
-                        this.hanleWarningDlgTimer()
-                    })
-                } else{
-                    self.setState({
-                        warningDlgShow: true,
-                        warningText: data.msg,
-                        code: code
-                    }, function(){
-                        this.hanleWarningDlgTimer()
-                    })
-                }
+                this.setState({
+                    dlgShow: false,
+                    warningDlgShow: true,
+                    warningText: data.msg,
+                    tradePassPwd: ""
+                }, function(){
+                    this.hanleWarningDlgTimer({code: code})
+                })
             })
         }
        
@@ -200,11 +171,10 @@ class DealItems extends Component {
                         return <li key={i} className="fz_22">
                             <p>
                                 <span className="fc_blue">单号：{item.trade_num}</span>
-                                <span className="f_rt fc_white">ID：{item.trade_id}</span>
+                                <span className="f_rt">ID：{item.trade_id}</span>
                             </p>
-                            <p className="fc_white text_center" style={{lineHeight: ".5rem"}}>挂卖{num}MAC，单价{price}元，总价{Math.round(parseFloat(num * price)*100)/100}</p>
-                            <p className="text_center">
-                                <span className="btn" onClick = { e => {
+                            <p style={{lineHeight: ".5rem"}}>挂卖{num}MAC，单价{price}元，总价{Math.round(parseFloat(num * price)*100)/100}
+                                <span className="btn f_rt" onClick = { e => {
                                     self.handleSellEvent({trade_id: item.trade_id})
                                 }}>卖给他</span>
                             </p>
@@ -212,23 +182,22 @@ class DealItems extends Component {
                     })
                 }
             </ul>
-            <div className="loadMore fz_12 fc_gray text_center mt_20" ref="wrapper"
+            <div className="loadMore fz_12 text_center mt_20" ref="wrapper"
              onClick={this.loadMoreDataFn.bind(this, this)}>{this.state.isLoadingMore ? "没有更多数据了" : "加载更多"}</div>
             <div className={this.state.dlgShow ? "dialog dlgPayPwd" : "dialog dlgPayPwd hide"}>
-                <p className="dlg_tit fc_white">输入密码</p>
                 <div className="dlg_form">
-                    <p className="text_center fz_24 fc_white">请输入支付密码：</p>
-                    <input className="b_blue1" type="password" value = {this.state.tradePassPwd} 
+                    <p className="text_center fz_32 mb_10">请输入支付密码：</p>
+                    <input type="password" value = {this.state.tradePassPwd} 
                     onChange = {e => {
                         this.handlePwdEvent({val: e.target.value})
                     }}
                     />
                     <div className="fgtTradepass"><Link to = "/account/forgetTradePwd"><span className="fz_24 fc_blue">忘记交易密码?</span></Link></div>
-                    <div className="over_hidden" style={{padding: "0 .14rem"}}>
-                        <span className="btn fz_24 fc_white f_lt" onClick = {e => {
+                    <div className="optWrap f_flex">
+                        <span className="btn fz_32 f_lt" style = {{color: "#e73b38"}} onClick = {e => {
                             self.handlePayPwd({type: "cancel"})
                         }}>取消</span>
-                        <span className="btn fz_24 fc_white f_rt" onClick = {e => {
+                        <span className="btn fz_32 f_rt" onClick = {e => {
                             self.handlePayPwd({type: "confirm"})
                         }}>确定</span>
                     </div>

@@ -199,35 +199,37 @@ class MineralPool extends Component {
         const tanTuiData = this.state.tanTuiData;
         return <div style={{paddingBottom: ".4rem"}}>
             <Title title="矿池" code = {this.state.code}/>
-            <div style={{padding: '0 .11rem'}}>
-                <div className="pool_overview f_flex">
-                    <div>
-                        <p className="fc_white fz_26">矿池算力（T）</p>
-                        <p className="fc_gray fz_22">(截至昨天)</p>
-                        <p className="fc_yellow fz_60">{this.state.force}</p>
+            <div>
+                <div className="pool_overview">
+                    <div className = "f_flex">
+                        <div>
+                            <p className="fc_white fz_26">矿池算力（T）</p>
+                            <p className="fc_gray fz_22">(截至昨天)</p>
+                            <p className="fc_yellow fz_60">{this.state.force}</p>
+                        </div>
+                        <div onClick = {e => {
+                            self.handleZtDlgEvent({type: "open"})
+                        }}>
+                            <p className="fc_white fz_26">总矿工数</p>
+                            <p className="fc_gray fz_22">(截至昨天)</p>
+                            <p className="fc_yellow fz_60">{this.state.num}</p>
+                        </div>
                     </div>
-                    <div onClick = {e => {
-                        self.handleZtDlgEvent({type: "open"})
-                    }}>
-                        <p className="fc_white fz_26">总矿工数</p>
-                        <p className="fc_gray fz_22">(截至昨天)</p>
-                        <p className="fc_yellow fz_60">{this.state.num}</p>
-                    </div>
+                    
+                        <ul className="deal_tab f_flex fz_30" style = {{marginTop: ".5rem"}}>
+                        {
+                            tabs.map(function(obj, i){
+                                return <li key = {i} className={self.state.tabIndex === i ? "active" : ""}>
+                                    <a
+                                        onClick = {e => {
+                                            self.handleDealTab({type: obj.type})
+                                        }}
+                                    >{obj.text}</a>
+                                </li>
+                            })
+                        }
+                        </ul>
                 </div>
-                <ul className="deal_tab f_flex fz_30">
-                {
-                    tabs.map(function(obj, i){
-                        return <li key = {i} className={self.state.tabIndex === i ? "active" : ""}
-                         style={{ borderTopLeftRadius: '.25rem', borderBottomLeftRadius: '.25rem'}}>
-                            <a
-                                onClick = {e => {
-                                    self.handleDealTab({type: obj.type})
-                                }}
-                            ><span>{obj.text}</span></a>
-                        </li>
-                    })
-                }
-                </ul>
                 <ul className="mineralItems f_flex">
                     {
                         mineralItems.length > 0 && mineralItems.map(function(item, i){
@@ -246,8 +248,8 @@ class MineralPool extends Component {
                                         <p>直推：{item.tui_num}</p>
                                     </div>
                                     <div>
-                                        <p>矿机：{item.count}</p>
-                                        <p>团队：{item.team_num}</p>
+                                        <p>矿机：{item.count}台</p>
+                                        <p>团队：{item.team_num}人</p>
                                     </div>
                                 </div>
                             </li>
@@ -256,34 +258,40 @@ class MineralPool extends Component {
                 </ul>
             </div>
             <div className={this.state.dlgZtDlgShow ? "dialog dlgZtMessage" : "dialog dlgZtMessage hide"}>
-                <p className="dlg_tit fc_white">直推信息</p>
-                <a className="btn_close" onClick = {e => {
+                <a className="btn_close fz_32" onClick = {e => {
                     self.handleZtDlgEvent({type: "close"})
-                }}></a>
-                <div style={{padding: '.25rem .45rem'}}>
-                    <ul className="f_flex">
-                        <li>
-                            <span>总直推数：{tanTuiData.count}</span>
-                            <span className="f_rt">入门矿工：{tanTuiData.one}</span>
-                        </li>
-                        <li>
-                            <span>初级矿工：{tanTuiData.two}</span>
-                            <span className="f_rt">中级矿工：{tanTuiData.three}</span>
-                        </li>
-                        <li>
-                            <span>高级矿工：{tanTuiData.four}</span>
-                            <span className="f_rt">顶级矿工：{tanTuiData.five}</span>
-                        </li>
-                    </ul>
+                }}>X</a>
+                <div>
+                    <p className="dlg_tit fz_32 text_center">直推信息</p>
+                    <div style={{padding: '.1rem .45rem'}}>
+                        <ul className="f_flex">
+                            <li>
+                                <span>总直推数：{tanTuiData.count}</span>
+                                <span className="f_rt">入门矿工：{tanTuiData.one}</span>
+                            </li>
+                            <li>
+                                <span>初级矿工：{tanTuiData.two}</span>
+                                <span className="f_rt">中级矿工：{tanTuiData.three}</span>
+                            </li>
+                            <li>
+                                <span>高级矿工：{tanTuiData.four}</span>
+                                <span className="f_rt">顶级矿工：{tanTuiData.five}</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div className={this.state.dlgZtMessageShow ? "dialog dlgMessage" : "dialog dlgMessage hide"}>
-                <p className="dlg_tit fc_white">个人信息</p>
-                <a className="btn_close" onClick = {e => {
-                    self.handleMessageDlg({type: "close"})
-                }}></a>
-                <div style={{padding: '.25rem .35rem'}}>
-                    <div>
+            <div className={this.state.dlgZtMessageShow ? "dialog dlgZtMessage" : "dialog dlgZtMessage hide"}>
+                <a className="btn_close fz_32" onClick = {e => {
+                    self.handleZtDlgEvent({type: "close"})
+                }}>X</a>
+                <div>
+                    <p className="dlg_tit fz_32 text_center" style = {{fontWeight: "600"}}>个人信息</p>
+                    <a className="btn_close" onClick = {e => {
+                        self.handleMessageDlg({type: "close"})
+                    }}></a>
+                    <div style={{padding: '.25rem .35rem'}}>
+                    <div className = "fz_32">
                         <span className="label">ID</span>
                         <span className="message">{this.state.dlgIdNum}</span>
                         <span className="btn" 
@@ -292,7 +300,7 @@ class MineralPool extends Component {
                             }}
                         >复制</span>
                     </div>
-                    <div style={{marginTop: '.245rem'}}>
+                    <div className = "fz_32" style={{marginTop: '.245rem'}}>
                         <span className="label">TEL</span>
                         <span className="message">{this.state.dlgIdPhone}</span>
                         <span className="btn"
@@ -302,6 +310,8 @@ class MineralPool extends Component {
                         >复制</span>
                     </div>
                 </div>
+            </div>
+                    
             </div>
             {this.state.shadowShow ? <Shadow /> : null}
             {this.state.warningDlgShow ? <WarningDlg text = {this.state.warningText} /> : null}

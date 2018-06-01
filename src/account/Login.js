@@ -14,8 +14,8 @@ class Login extends Component {
     this.state = { 
       logined: false,
       keepPwd: false,
-      phone: localStorage.getItem("phone") || "",
-      l_pass: "",
+      phone: localStorage.getItem("phone") || "18796271508",
+      l_pass: "123456",
       warningDlgShow: false,
       warningText: ""
     };

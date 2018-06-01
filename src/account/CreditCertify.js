@@ -109,7 +109,7 @@ class CreditCertify extends Component{
                 </div> : 
                 <div className="account_form fz_26">
                     <div>
-                        <label className="fc_white">持卡人</label>
+                        <label>持卡人</label>
                         <input type="text" name="" placeholder="请输入持卡人姓名" value = {this.state.bank_user}
                         onChange = {e => {
                             this.handleInputChange({type: "bank_user", val: e.target.value})
@@ -117,7 +117,7 @@ class CreditCertify extends Component{
                         />
                     </div>
                     <div>
-                        <label className="fc_white">银行名称：</label>
+                        <label>银行名称：</label>
                         <input type="text" name="" placeholder="请输入银行名称" value = {this.state.bank_name}
                         onChange = {e => {
                             this.handleInputChange({type: "bank_name", val: e.target.value})
@@ -125,7 +125,7 @@ class CreditCertify extends Component{
                         />
                     </div>
                     <div>
-                        <label className="fc_white">银行卡号：</label>
+                        <label>银行卡号：</label>
                         <input type="text" placeholder="请确认银行卡号" value = {this.state.bank_num} 
                         onChange = {e => {
                             this.handleInputChange({type: "bank_num", val: e.target.value})

@@ -1,32 +1,40 @@
 div.item{
-    height: 1.265rem;
-    margin: .05rem 0;
-    background-image: url(../../img/bg_kuang_kuangji.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    height: 1.2rem;
+    background-color: white;
+    border-bottom: .01rem solid #ddd;
     div.goodPic{
-        width: .8rem;
-         height: .8rem; 
+        width: .6rem;
+         height: .6rem; 
+         border-radius: 50%;
          background-size: 100% 100%;
-          margin: .2rem;
+         margin: .3rem .2rem;
     }
     div.goodItem{
-        width: 2.32rem;
-        padding: .15rem 0;
+        width: 2.7rem;
+        padding: .05rem 0;
         position: relative;
         h6{
             line-height: .4rem;
         }
         p{
             line-height: .2rem;
-            color: white;
+        }
+        p::before{
+            content: "";
+            display: inline-block;
+            width: .05rem;
+            height: .05rem;
+            background-color: #ffa900;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: .05rem;
         }
         .cart{
             height: .245rem;
             line-height: .245rem;
             color: white;
-            background-color: rgba(255, 251, 2, 0.5);
-            border: .01rem solid #fffb02;
+            background-color: #ffa900;
+            border: .01rem solid #ffa900;
             border-radius: .15rem;
             padding: 0 .1rem;
             position: absolute;

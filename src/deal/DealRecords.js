@@ -185,7 +185,7 @@ class DealRecords extends Component {
             )
         }
         return <div>
-            <div className="dealRecords b_blue1">
+            <div className="dealRecords">
                 <ul className="tabs f_flex">
                     {
                         tabs.map(function(tab, i){
@@ -197,7 +197,7 @@ class DealRecords extends Component {
                         })
                     }
                 </ul>
-                <div style = {{height: "1.62rem", marginTop: ".4rem", overflowY: "auto"}}>
+                <div style = {{ width: "94%", height: "1.62rem", marginTop: ".1rem", overflowY: "auto", position: "absolute", top: ".4rem"}}>
                     <ul className = "records f_flex">
                     {
                         dealRecords.length > 0 && dealRecords.map(function(record, i){
@@ -205,10 +205,12 @@ class DealRecords extends Component {
                             return <li key = {i}>
                                 <a onClick = {e => {
                                     self.showBuyerSellerMsg({id: type === 1 ? record.sell_id : record.buy_id})
-                                }}><p className = "fz_20 over_hidden"><span className = "f_lt fc_blue">单号 ：{record.trade_num}</span>
-                                    <span className = "f_rt fc_white">{status_msg}</span></p>
-                                <p className = "fc_white fz_20">{type === 1 ? "卖家ID ：" + record.sell_msg : "买家ID：" + record.buy_msg}</p>
-                                <p className = "fc_white fz_20">挂卖{record.num}JSD，单价{record.price}元，总价{parseFloat(record.num * record.price).toFixed(2)}</p>
+                                }}>
+                                    <p className = "fz_20 over_hidden"><span className = "f_lt fc_blue">单号 ：{record.trade_num}</span>
+                                        <span className = "f_rt">{status_msg}</span></p>
+                                    <p className = "fz_20">{type === 1 ? "卖家ID ：" + record.sell_msg : "买家ID：" + record.buy_msg}</p>
+                                    <p className = "fz_20">挂卖{record.num}JSD，单价{record.price}元</p>
+                                    <p className = "fz_20">总价{parseFloat(record.num * record.price).toFixed(2)}</p>
                                 </a>
                                 {type === 1 && status_msg === "已付币" ? <span className="btn fz_20" onClick = { e => {
                                     self.handleMoneyEvent({trade_id: record.trade_id, type: "maskSetMoney"})
@@ -216,7 +218,6 @@ class DealRecords extends Component {
                                 {type === 2 && status_msg === "已付款" ? <span className="btn fz_20" onClick = { e => {
                                     self.handleMoneyEvent({trade_id: record.trade_id, type: "maskGetMoney"})
                                 }}>确认收款</span> : null}
-                               
                             </li>
                         })
                     }
@@ -227,37 +228,40 @@ class DealRecords extends Component {
                
             </div>
             <div className={this.state.dlgShow ? "dialog dlgPayPwd" : "dialog dlgPayPwd hide"}>
-                <p className="dlg_tit fc_white">输入密码</p>
                 <div className="dlg_form">
-                    <p className="text_center fz_24 fc_white">请输入支付密码：</p>
-                    <input className="b_blue1" type="password" value = {this.state.tradePassPwd} 
+                    <p className="text_center fz_32 mb_10">请输入支付密码：</p>
+                    <input type="password" value = {this.state.tradePassPwd} 
                     onChange = {e => {
                         this.handlePwdEvent({val: e.target.value})
                     }}
                     />
                     <div className="fgtTradepass"><Link to = "/account/forgetTradePwd"><span className="fz_24 fc_blue">忘记交易密码?</span></Link></div>
-                    <div className="over_hidden" style={{padding: "0 .14rem"}}>
-                        <span className="btn fz_24 fc_white f_lt" onClick = {e => {
+                    <div className="optWrap f_flex">
+                        <span className="btn fz_32 f_lt" style = {{color: "#e73b38"}} onClick = {e => {
                             self.handlePayPwd({type: "cancel"})
                         }}>取消</span>
-                        <span className="btn fz_24 fc_white f_rt" onClick = {e => {
+                        <span className="btn fz_32 f_rt" onClick = {e => {
                             self.handlePayPwd({type: "confirm"})
                         }}>确定</span>
                     </div>
                 </div>
             </div>
-            <div className={this.state.msgDlgShow ? "dialog dlgZtMessage" : "dialog dlgZtMessage hide"}>
-                <p className="dlg_tit fc_white">{type === 1 ? "卖家信息" : "买家信息"}</p>
-                <a className="btn_close" onClick = {e => {
-                    self.setState({msgDlgShow: false, shadowShow: false})
-                }}></a>
-                <div style={{padding: '.25rem'}}>
-                    <ul className="f_flex">
-                        <li style={{lineHeight: ".3rem"}}>姓名：{msgDlgData.name}</li>
-                        <li style={{lineHeight: ".3rem"}}>手机号：{msgDlgData.phone}</li>
-                        <li style={{lineHeight: ".3rem"}}>微信账号：{msgDlgData.wx_num}</li>
-                        <li style={{lineHeight: ".3rem"}}>支付宝账号：{msgDlgData.zfb_num}</li>
-                    </ul>
+            <div className={this.state.msgDlgShow ? "dialog dlgMsg" : "dialog dlgMsg hide"}>
+                <div style = {{paddingTop: ".2rem"}}>
+                    <p className="dlg_tit fz_32 text_center">{type === 1 ? "卖家信息" : "买家信息"}</p>
+                    <a className="btn_close fz_32" style = {{top: ".1rem", right: ".05rem"}} onClick = {e => {
+                        self.setState({msgDlgShow: false, shadowShow: false})
+                    }}>X</a>
+                    <div style={{padding: '.1rem .5rem'}}>
+                        <ul className="f_flex fz_24">
+                            <li>姓名：{msgDlgData.name}</li>
+                            <li>手机号：{msgDlgData.phone}</li>
+                            <li>微信账号：{msgDlgData.wx_num}</li>
+                            <li>支付宝账号：{msgDlgData.zfb_num}</li>
+                            <li>银行卡名称：{msgDlgData.bank_name}</li>
+                            <li>银行卡账号：{msgDlgData.bank_num}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             {this.state.shadowShow ? <Shadow /> : null}

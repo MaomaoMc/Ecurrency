@@ -118,28 +118,27 @@ class Ptp extends Component {
                         />
                     </li>
                 </ul>
-                <p className="fz_18 fc_white mt_10">*交易手续费20%；如转入100JSD，系统将扣120JSD。</p>
-                <span className="btn btn_orange block" style={{margin: '.25rem auto', display: 'block'}}
+                <p className="fz_18 fc_blue mt_10">*交易手续费20%；如转入100JSD，系统将扣120JSD。</p>
+                <span className="btn btn_primary" style = {{height: ".35rem", lineHeight: ".35rem", width: "1.5rem",
+                 display: "block", margin: ".2rem auto"}}
                 onClick = {e => {
                     this.handleSell()
-                }}
-                >卖出</span>
+                }}>卖出</span>
             </div>
             <div className={this.state.dlgShow ? "dialog dlgPayPwd" : "dialog dlgPayPwd hide"}>
-                <p className="dlg_tit fc_white">输入密码</p>
                 <div className="dlg_form">
-                    <p className="text_center fz_24 fc_white">请输入支付密码：</p>
-                    <input className="b_blue1" type="password" value = {this.state.pass} 
+                    <p className="text_center fz_32">请输入支付密码：</p>
+                    <input type="password" value = {this.state.pass} 
                     onChange = {e => {
                         this.handlePwdEvent({val: e.target.value})
                     }}
                     />
                     <div className="fgtTradepass"><Link to = "/account/forgetTradePwd"><span className="fz_24 fc_blue">忘记交易密码?</span></Link></div>
-                    <div className="over_hidden" style={{padding: "0 .14rem"}}>
-                        <span className="btn fz_24 fc_white f_lt" onClick = {e => {
+                    <div className="optWrap f_flex">
+                        <span className="btn fz_32 f_lt" style = {{color: "#e73b38"}} onClick = {e => {
                             this.handlePayPwd({type: "cancel"})
                         }}>取消</span>
-                        <span className="btn fz_24 fc_white f_rt" onClick = {e => {
+                        <span className="btn fz_32 f_rt" onClick = {e => {
                             this.handlePayPwd({type: "confirm"})
                         }}>确定</span>
                     </div>

@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
-// import Tab from './Tab';
 import './js/common.js'
 import Account from './account/index.js';
 import MachineM from './machineMarket/index.js';
 import MineralPool from './mineralPool/index.js';
 import Deal from './deal/index.js';
 import NewerGdNotes from './guadan/NewerGdNotes.js';
-// import GuaDan from './guadan/index.js';
-// import registerServiceWorker from './registerServiceWorker';
-
 
 ReactDOM.render(
     <Router>

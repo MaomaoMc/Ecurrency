@@ -1,22 +1,43 @@
 .assetTotal {
-  width: 3.595rem;
-  height: 1.76rem;
-  background-image: url(../../img/bg_zichan.png);
+  width: 100%;
+  height: 2.925rem;
+  background-image: url(../../img/grzl_bg.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin: .1rem auto; }
+  position: relative;
+  margin-top: -.45rem;
+  margin-bottom: .05rem; }
+  .assetTotal img {
+    width: .785rem;
+    height: .785rem;
+    border-radius: 50%;
+    margin-top: .601rem; }
+  .assetTotal ul {
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: .1rem; }
+    .assetTotal ul li {
+      flex-grow: 1;
+      text-align: center;
+      font-size: .14rem;
+      line-height: .3rem; }
 
 .account_menus {
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: #fff;
   padding: 0 .15rem;
   padding-bottom: .8rem; }
   .account_menus div.menus_item {
     width: 1.15rem;
     text-align: center; }
+    .account_menus div.menus_item a {
+      color: #666; }
     .account_menus div.menus_item span.icon {
       display: block;
-      width: .76rem;
-      height: .95rem;
+      width: .32rem;
+      height: .3rem;
       background-size: 100% 100%;
       margin: 0 auto; }

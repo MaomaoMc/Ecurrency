@@ -45,7 +45,6 @@ class Certify extends Component{
         const type = e.type; //正面还是反面照
         const baseUrl = window.baseUrl;
         let file;
-        console.log(type, 'type')
         if(type === "front_pic"){
             file = document.getElementById("front_pic").files[0];
         }else{
@@ -136,7 +135,7 @@ class Certify extends Component{
     }
     componentDidMount(){
         const type = this.props.match.params.type;
-        if(type == "authorized"){  //已认证的话 就显示认证的信息
+        if(type === "authorized"){  //已认证的话 就显示认证的信息
             this.ajax();
         }
     }
@@ -146,14 +145,14 @@ class Certify extends Component{
         return <div className="over_hidden" style={{paddingBottom: "2rem"}}>
             <Title title="实名认证" code = {this.state.code}/>
             {type === "authorized" ? 
-                <div className="certify text_center fz_26 fc_white">
+                <div className="certify text_center fz_26">
                         <img src={pic} alt="" style={{width: ".6rem", height: ".6rem", marginTop: '.15rem'}} />
                         <p>{data.username}</p>
                         <p>{data.card_num}</p>
                 </div> : 
                 <div className="account_form fz_26">
                     <div>
-                        <label className="fc_white">真实姓名：</label>
+                        <label>真实姓名：</label>
                         <input type="text" name="" placeholder="请输入真实姓名" value = {this.state.username}
                         onChange = {e => {
                             this.handleInputChange({type: "username", val: e.target.value})
@@ -161,7 +160,7 @@ class Certify extends Component{
                         />
                     </div>
                     <div>
-                        <label className="fc_white">身份证号：</label>
+                        <label>身份证号：</label>
                         <input type="text" placeholder="请确认身份证号" value = {this.state.card_num} 
                         onChange = {e => {
                             this.handleInputChange({type: "card_num", val: e.target.value})
@@ -185,7 +184,7 @@ class Certify extends Component{
                                 {this.state.f_idpic !== "" ? null : <span>+身份证反面照</span>}
                             </p>
                         </form>
-                <span className="btn btn_primary login_btn h_80 fz_26 f_lt mt_50" style={{ width: '100%' }}
+                <span className="btn btn_primary login_btn h_80 fz_26 f_lt mt_50" style={{ width: '95%' }}
                     onClick={e => {
                         this.submit({})
                     }}>提交</span>

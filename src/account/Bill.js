@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import qs from 'qs';
 import Title from './../Title';
+import Tab from './../Tab';
 import WarningDlg from './../WarningDlg';
 
 const tabs = [
@@ -89,7 +90,7 @@ class Bill extends Component {
         const self = this;
         const data = this.state.data;
         const money = this.state.money;
-        return <div>
+        return <div style = {{backgroundColor: "white"}}>
             <Title title="账单中心" code = {this.state.code}/>
           <ul className="billTab f_flex">
           {
@@ -102,22 +103,23 @@ class Bill extends Component {
               })
           }
           </ul>
-          <p className="fc_yellow totalSum" style={{fontSize: ".395rem"}}>{money > 0 ? "+" : "-"}{this.state.money}</p>
-          <ul className="billItems f_flex fz_24">
+          <p className="totalSum fc_blue fz_50">{money > 0 ? "+" : "-"}{this.state.money}</p>
+          <ul className="billItems f_flex fz_24 mt_40">
           {
               data.map(function(bill, i){
                   const type = bill.type;
                   return <li key={i}>
-                    <span className="fc_blue">{bill.content}</span><br/>
-                    <p className="fc_white">
-                        <span className="f_lt">{bill.add_time}</span>
-                        <span className="f_rt">{type === 1 ? "+" : "-"}{parseFloat(bill.money).toFixed(2)}</span>
+                    <span></span><br/>
+                    <p>
+                        <span className="f_lt">{bill.content}<span className = "fc_blue ml_10">{type === 1 ? "+" : "-"}{parseFloat(bill.money).toFixed(2)}</span></span>
+                        <span className="f_rt">{bill.add_time}</span>
                     </p>
                 </li>
               })
           }
           </ul>
           {this.state.warningDlgShow ? <WarningDlg text = {this.state.warningText} /> : null}
+          <Tab />
         </div>
     }
 }

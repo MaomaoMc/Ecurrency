@@ -1,7 +1,7 @@
 .logo{
     width: 1.32rem;
     height: 1.33rem;
-    background-image: url(../../img/jsd.png);
+    background-image: url(../../img/logo.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
     margin-top: .5rem;
@@ -14,8 +14,7 @@
     div{
         height: .4rem;
         line-height: .4rem;
-        border: .01rem solid #00a8ff;
-        border-radius: .05rem;
+        border-bottom: .01rem solid #eef2f5;
         position: relative;
         margin-top: .1rem;
         label{
@@ -32,11 +31,6 @@
        height: .4rem;
        line-height: .4rem;
         float: right;
-        color: white;
-    }
-    
-    input.code{
-        // width: 2.24rem;
     }
     span.sendMessage{
         width: 1.07rem;
@@ -44,8 +38,6 @@
         line-height: .4rem;
         float: right;
     }
-    
-    
 }
 .login_btn, .register_btn, .submit_btn{
     line-height: .4rem;
@@ -59,16 +51,10 @@
         text-indent: .15rem;
         height: .4rem;
         line-height: .4rem;
-        border: .01rem solid #00a8ff;
+        border: .01rem solid #ddd;
         border-radius: .05rem;
         float: right;
-        margin-top: .2rem;
-    }
-    input[placeholder], [placeholder], *[placeholder] {   
-        color: #00a8ff !important;
-    } 
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: #00a8ff !important;
+        margin-top: .1rem;
     }
     input.code{
         width: 2.24rem;
@@ -79,7 +65,7 @@
         height: .4rem;
         line-height: .4rem;
         float: right;
-        margin-top: .2rem;
+        margin-top: .1rem;
     }
     .back_login{
         height: .4rem;
@@ -98,14 +84,14 @@
    text-align: center;
    padding-bottom: .4rem;
     img{
-        width: .76rem;
-        max-height: .95rem;
+        width: .78rem;
+        height: .78rem;
     }
     .file {
-        width: .76rem;
-        height: .95rem;
+        width: .78rem;
+        // height: .85rem;
         line-height: .95rem;
-        margin: .5rem auto 0;
+        margin: 0rem auto 0;
         background-size: 100% 100%;
         position: relative;
         input[type='file']{
@@ -123,6 +109,9 @@
         li{
             flex-grow: 1;
             line-height: .3rem;
+            p.fc_blue{
+                font-weight: 600;
+            }
         }
     }
 }
@@ -131,22 +120,22 @@
     flex-direction: row;
     height: .4rem;
     line-height: .4rem;
-    border-bottom: .01rem solid #00a8ff; 
+    border-bottom: .01rem solid #eef2f5;
+    background-color: white; 
     li{
         flex-grow: 1;
         text-align: center;
         a{
             display: inline-block;
            height: .39rem;
-            font-size: .15rem;
-            color: white;
+            font-size: .11rem;
             vertical-align: bottom;
         }
     }
     li.active{
         a{
-            color: #00a8ff;
-            border-bottom: .02rem solid #00a8ff;
+            color: #3c82ff;
+            border-bottom: .02rem solid #3c82ff;
         }
     }
 }
@@ -161,25 +150,25 @@
     margin-bottom: .4rem;
     li{
         line-height: .2rem;
-        border-bottom: .01rem solid #00a8ff;
+        border-bottom: .01rem solid #eef2f5;
         padding-top: .1rem;
     }
 }
 /*客服中心*/
 .clientService{
-    padding: 0 .2rem;
-    margin-top: .2rem;
+    font-size: .12rem;
+    padding: .3rem .2rem;
     .icon{
         background-repeat: no-repeat;
         background-size: 100% 100%;
         float: left;
         vertical-align: middle;
-        margin-right: .1rem;
+        margin-right: .05rem;
     }
     .icon.kefu{
-        width: .27rem;
-        height: .27rem;
-        background-image: url(../../img/cion_kef.png);
+        width: .25rem;
+        height: .25rem;
+        background-image: url(../../img/icon_kef.png);
     }
     p{
         line-height: .3rem;
@@ -191,9 +180,8 @@ img.wechat{
     background-image: url(../../img/icon_weixin.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    
     vertical-align: middle;
-    margin-right: .1rem;
+    margin-right: .05rem;
 }
 img.weChatgzh{
     width: 1.62rem;
@@ -204,13 +192,15 @@ img.weChatgzh{
     flex-direction: column;
     padding: .16rem;
     li{
+        width: 100%;
+        height: 1.01rem;
+        background-color: white;
         background-image: url(../../img/bg_xitongkuang.png);
         background-repeat: repeat;
         background-size: 100% 100%;
-        padding: .2rem;
         margin-bottom: .2rem;
         p{
-            line-height: .3rem;
+            line-height: .24rem;
             text-align: center;
         }
     }
@@ -218,6 +208,7 @@ img.weChatgzh{
 
 ul.lists{
     flex-direction: column;
+    background-color: white;
     margin-top: .2rem;
     a{
         display: block;
@@ -225,37 +216,30 @@ ul.lists{
         height: 100%;
     }
     li{
-        border-top: .01rem solid #00a8ff;
+        border-top: .01rem solid #eef2f5;
         height: .47rem;
         line-height: .47rem;
         text-indent: .3rem;
         padding-right: .2rem;
         position: relative;
+        a{
+            color: #666;
+        }
         .mark{
             width: .52rem;
             height: .19rem;
             font-size: .12rem;
-            border-style: solid;
+            color: white;
             border-width: .01rem;
             border-radius: .2rem;
             margin-left: .1rem;
             padding: .05rem .1rem;
-           
         }
         .mark.authenticated{
-            border-color: #14a842;
-            color: #14a842;
-            a{
-                color: #14a842;
-            }
-            
+            background-color: #1dce3a;
         }
         .mark.unauthorized{
-            border-color: #aaa;
-            color: #aaa;
-            a{
-                color: #aaa;
-            }
+            background-color: #bfbfbf;
         }
         .go_arrow{
             display: inline-block;
@@ -270,7 +254,7 @@ ul.lists{
         
     }
     li:last-child{
-        border-bottom: .01rem solid #00a8ff;
+        border-bottom: .01rem solid #eef2f5;
     }
 }
 /*油卡充值*/
@@ -292,7 +276,7 @@ input.czAmount{  /*充值金额*/
     width: .55rem;
     height: .3rem;
     text-align: center;
-    border: .01rem solid #00a8ff;
+    border: .01rem solid #3c82ff;
     color: white;
 }
 /*实名认证*/
@@ -307,14 +291,13 @@ input.czAmount{  /*充值金额*/
 }
 #card_from{
     p{
-        width: 3rem;
+        width: 2.5rem;
         height: 1.5rem;
         line-height: 1.5rem;
-        color: white;
-        border: .01rem dashed #00a8ff;
+        border: .01rem dashed #ddd;
         border-radius: .05rem;
         text-align: center;
-        margin-top: .2rem;
+        margin: .2rem auto 0;
         position: relative;
         input.card_pic{
             display: block;
@@ -346,7 +329,7 @@ input.czAmount{  /*充值金额*/
     display: inline-block;
     width: .12rem;
     height: .12rem;
-    border: .01rem solid #00a8ff;
+    border: .01rem solid #3c82ff;
     border-radius: .05rem;
 }
 /*留言反馈*/
@@ -354,8 +337,8 @@ input.czAmount{  /*充值金额*/
     padding: .2rem;
     div{
         height: 2.5rem;
-        border: .01rem solid #00a8ff;
-        border-radius: .1rem;
+        border: .01rem solid #666;
+        border-radius: .05rem;
         padding: .1rem;
     }
     textarea{
@@ -364,22 +347,14 @@ input.czAmount{  /*充值金额*/
         border: none;
         
     }
-    // textarea[placeholder]{
-    //     color: white;
-    // }
-    input[placeholder], [placeholder], *[placeholder] {   
-        color: #00a8ff !important;
-    } 
-    ::-webkit-input-placeholder { /* WebKit browsers */
-        color: #00a8ff !important;
-    }
 }
 .feedBackLists{  //留言列表
     flex-direction: column;
     padding: 0 .2rem .4rem;
     li{
         flex-grow: 1;
-        border: .01rem solid #00a8ff;
+        background-color: #fff;
+        border: .01rem solid #ddd;
         border-radius: .05rem;
         padding: .1rem .2rem;
         margin-top: .15rem;
@@ -404,9 +379,8 @@ input.czAmount{  /*充值金额*/
     width: 3rem;
     height: 4rem;
     font-size: .1rem;
-    color: white;
-    background-color: #031d59;
-    border: .01rem solid #00a8ff;
+    background-color: white;
+    border: .01rem solid #ddd;
     border-radius: .15rem;
     padding: .15rem;
     position: fixed;
@@ -440,10 +414,9 @@ ul.myMineralUl{
     padding: .15rem;
     li{
         flex-grow: 1;
-        border: .01rem solid #00a8ff;
-        border-radius: .05rem;
-        background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 50%, transparent 0);  
-        background-size: .03rem 100%;  
+        // border: .01rem solid #3c82ff;
+        // border-radius: .05rem;
+        background-color: white;
         padding: .2rem;
         margin-bottom: .15rem;
         position: relative;
@@ -461,10 +434,10 @@ ul.myMineralUl{
             bottom: .25rem;
         }
         span.btn.active{
-            color: rgb(255, 255, 0);
-            border: .01rem solid rgb(255, 255, 0);
+            color: white;
+            border: .01rem solid #fda100;
             border-radius: .12rem;
-            background-color: rgba(255, 255, 0, .3);
+            background-color: #fda100;
         }
     }
 }
@@ -477,7 +450,7 @@ ul.myMineralUl{
         line-height: .19rem;
         padding: 0 !important;
         color: white;
-        border: .01rem solid #00a8ff;
+        border: .01rem solid #3c82ff;
         background-color: rgba(7, 79, 155, .5);
         height: .19rem;
         overflow: hidden;

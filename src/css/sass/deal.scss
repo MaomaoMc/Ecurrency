@@ -1,8 +1,7 @@
 div.priceItems{
-    width: 3.595rem;
-  height: 1.265rem;
-  margin: .15rem auto;
-  background-image: url(../../img/bg_kuang_kuangji.png);
+  height: 2.57rem;
+  background-image: url(../../img/head_bg.png);
+  background-repeat: no-repeat;
   background-size: 100%;
   div{
     flex-grow: 1; /* default 0 */
@@ -23,20 +22,19 @@ div.priceItems{
 ul.deal_tab{
     width: 3.09rem;
     height: .365rem;
-    border: .01rem solid #00a8ff;
+    border: .01rem solid #3c82ff;
     border-radius: .5rem;
     margin: 0 auto;
     li{
         flex-grow: 1; /* default 0 */
         text-align: center;
+        margin-top: -.01rem;
         a{
             display: inline-block;
             width: 100%;
-            height: 100%;
-            color: white;
+            height: .365rem;
             line-height: .365rem;
-            background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .3) 80%, transparent 0);  
-            background-size: .0275rem 100%;  
+            color: #3c82ff;
         }
     }
     li:first-child{
@@ -53,31 +51,27 @@ ul.deal_tab{
     }
     li.active{
         a{
-            background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 80%, transparent 0); 
-            background-size: .0275rem 100%;  
+            border: .01rem solid #3c82ff;
+            background-color: #3c82ff;
+            color: white;
         }
     }
 }
 ul.guadanTab{
-    width: 100%;
+    width: 3.5rem;
     height: .935rem;
-    background-color: #031d59;
-    // background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 50%, transparent 0);  
-    // background-size: .03rem 100%;    
-    border-top: .01rem solid #00a8ff; 
-    border-bottom: .01rem solid #00a8ff; 
-    // position: fixed;
-    // left: 0;
-    // bottom: .65rem;
-    // z-index: 99;
+    margin: .2rem auto 0;
     li{
-        flex-grow: 1;
+        width: 1.8rem;
         height: .935rem;
         text-align: center;
-        img{
-            width: .35rem;
-            height: .36rem;
-            margin: .2rem auto 0;
+        border-radius: .15rem;
+        i{
+            display: block;
+            width: .3rem;
+            height: .27rem;
+            background-size: 100% 100%;
+            margin: .2rem auto .1rem;
         }
         a{
             display: block;
@@ -86,35 +80,42 @@ ul.guadanTab{
             color: white;
         }
     }
+    li:nth-child(1){
+        background: linear-gradient(left, #ffa25a, #ff5e76);
+        background: -webkit-linear-gradient(left, #ffa25a, #ff5e76);
+        background: -o-linear-gradient(left, #ffa25a, #ff5e76);
+        background: -moz-linear-gradient(left, #ffa25a, #ff5e76);
+    }
     li:nth-child(2){
-        border-left: .01rem solid #00a8ff;
+        margin-left: .1rem;
+        background: linear-gradient(left, #4da4ff, #8e79ff);
+        background: -webkit-linear-gradient(left, #4da4ff, #8e79ff);
+        background: -o-linear-gradient(left, #4da4ff, #8e79ff);
+        background: -moz-linear-gradient(left, #4da4ff, #8e79ff);
     }
 }
 /*点对点*/
 .ptpFrom{
-    padding: 0 .4rem;
+    width: 3.09rem;
+    margin: .1rem auto 0;
+    background-color: #fff;
+    padding: 0 .2rem .1rem;
     ul{
         flex-direction: column;
         li{
             height: .48rem;
             line-height: .48rem;
             font-size: .12rem;
-            border-bottom: .01rem solid #00a8ff;
+            border-bottom: .01rem dashed #ddd;
             span{
                 display: inline-block;
                 width: .95rem;
-                color: #00a8ff;
+                color: #5a5a5a;
             }
             input{
                 border: none;
                 height: .3rem;
                 line-height: .3rem;
-            }
-            input[placeholder], [placeholder], *[placeholder] {   
-                color: rgba(255, 255, 255, .3) !important;
-            } 
-            ::-webkit-input-placeholder { /* WebKit browsers */
-                color: rgba(255, 255, 255, .3) !important;
             }
         }
     }
@@ -124,15 +125,12 @@ ul.dealItems{
     padding: 0 .15rem;
     margin-top: .15rem;
     li{
-        padding: .19rem .27rem .11rem;
-        border: .01rem solid #00a8ff;
-        border-radius: .05rem;
-        background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 50%, transparent 0);  
-        background-size: .03rem 100%;  
+        padding: .11rem .27rem;
+        background-color: #fff;
         margin-top: .15rem;
         span.btn{
             width: .9rem;
-            margin: 0 auto;
+            margin-top: .1rem;
         }
     }
 }
@@ -141,11 +139,9 @@ ul.dealItems{
         span.btn{
             height: .24rem;
             line-height: .24rem;
-            color: rgb(255, 255, 0);
-            border: .01rem solid rgb(255, 255, 0);
+            color: white;
             border-radius: .12rem;
-            background-color: rgba(255, 255, 0, .3);
-            // margin: 0 auto;
+            background-color: #3c82ff;
         }
     }
 }
@@ -153,20 +149,19 @@ ul.dealItems{
 .dealRecords{
     width: 3.35rem;
     height: 2.12rem;
-    border-radius: .1rem;
+    background-color: white;
     margin: .1rem auto;
     position: relative;
     ul.tabs{
         flex-direction: row;
         width: 100%;
         height: .4rem;
-        border-bottom: .01rem solid #00a8ff;
+        border-bottom: .01rem solid #ddd;
         position: absolute;
         top: 0;
         left: 0;
         li{
             flex-grow: 1;
-            color: white;
             font-size: .14rem;
             text-align: center;
             a{
@@ -176,9 +171,9 @@ ul.dealItems{
             }
         }
         li.active{
-            color: #00a8ff;
+            color: #3c82ff;
             a{
-                border-bottom: .015rem solid #00a8ff;
+                border-bottom: .015rem solid #3c82ff;
             }
         }
     }
@@ -188,7 +183,7 @@ ul.dealItems{
         overflow: hidden;
         li{
             flex-grow: 1;
-            border-bottom: .01rem solid #00a8ff;
+            border-bottom: .01rem dashed #ddd;
             padding: .1rem;
             position: relative;
             a{
@@ -210,22 +205,12 @@ ul.dealItems{
     }
 }
 /*弹窗*/
-.dlgPayKj{
-    width: 3.025rem;
-    height: 1.735rem;
+.dlgPayKj, .dlgPayPwd{
+    width: 3.22rem;
+    height: 2.84rem;
     background-image: url(../../img/bg_tankuang.png);
     margin-left: -1.5225rem;
-    margin-top: -1rem;
-}
-.dlgPayPwd{
-    width: 3.025rem;
-    height: 2.035rem;
-    background-image: url(../../img/bg_mima.png);
-    margin-left: -1.5225rem;
-    margin-top: -1rem;
-    input {
-        color: white;
-    }
+    margin-top: -1.42rem;
 }
 .dialog{
     background-repeat: no-repeat;
@@ -233,49 +218,42 @@ ul.dealItems{
     position: fixed;
     left: 50%;
     top: 50%;
-    .dlg_tit{
-        font-size: .18rem;
-        text-indent: .5rem;
-        height: .37rem;
-        line-height: .4rem;
+    input {
+        border: .01rem solid #ddd;
     }
     a.btn_close{
         display: block;
         width: .22rem;
         height: .22rem;
         position: absolute;
-        top: .15rem;
-        right: .11rem;
+        top: .5rem;
+        right: .1rem;
     }
     .dlg_form{
-        padding: .05rem .275rem;
+        padding: 1.2rem .5rem;
         p{
-            margin: .2rem 0;
+            text-align: center;
         }
         input{
             width: 100%;
             height: .29rem;
             float: left;
-            margin-bottom: .1rem;
+            text-indent: .1rem;
+            margin-bottom: .05rem;
+            border: .01rem solid #ddd;
         }
-        span.btn{
-            width: .775rem;
-            height: .275rem;
-            text-align: center;
-            line-height: .275rem;
-            border-left: .005rem solid rgb(255, 255, 0);
-            background-color: #253970;
-            position: relative;
-        }
-        span.btn::after{
-            content: "";
-            width: 0; 
-            height: 0; 
-            border-top: .08rem solid #151d2e; 
-            border-left: .08rem solid transparent; 
+        .optWrap{
+            flex-direction: row;
+            line-height: .6rem;
+            width: 94%;
             position: absolute;
-            top: 0;
-            right: 0;
+            left: .1rem;
+            bottom: .2rem;
+            span{
+                flex-grow: 1;
+                display: block;
+                text-align: center;
+            }
         }
     }
     .fgtTradepass{
@@ -290,14 +268,13 @@ ul.dealItems{
 /*挂单*/
 .guadanItems{
     text-align: center;
-    padding: 0 .18rem;
+    background-color: white;
+    padding: .2rem .18rem;
     margin-top: .2rem;
     text-align: center;
     .tip{
-        border: .01rem dashed #00a8ff;
+        border: .01rem dashed #666;
         border-radius: .05rem;
-        background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 50%, transparent 0);  
-        background-size: .03rem 100%;  
         text-align: center;
         height: .3rem;
         line-height: .3rem;
@@ -311,7 +288,7 @@ ul.dealItems{
             padding: 0 .2rem;
             div{
                 width: 2.19rem;
-                border: .01rem solid #00a8ff;
+                border: .01rem solid #fda100;
                 border-radius: .5rem;
                 margin: 0 .1rem;
                 position: relative;
@@ -320,11 +297,10 @@ ul.dealItems{
                 display: inline-block;
                 width: .415rem;
                 height: .355rem;
-                line-height: .3rem;
-                background: linear-gradient(to right,/* 或90deg */rgba(255, 255, 255, .075) 90%, transparent 0);  
-                background-size: .03rem 100%;  
+                line-height: .355rem;
+                background-color: #fda100;
                 position: absolute;
-                top: 0;
+                top: -.01rem;
             }
             .price_opt.price_down{
                 left: 0;
@@ -375,17 +351,33 @@ ul.dealItems{
             border-radius: .05rem;
             margin: .2rem 0 .15rem;
         }
-        .notice{
-            a{
-                color: rgba($color: #ffffff, $alpha: .4);
-                img{
-                    width: .13rem;
-                    height: .13rem;
-                    margin-right: .05rem;
-                    vertical-align: text-top;
-                }
-            }
-            
+    }
+    span.btn{
+        width: 1rem;
+        height: .3rem;
+        text-align: center;
+        line-height: .3rem;
+        color: white;
+        background-color: #3c82ff;
+        border-radius: .2rem;
+    }
+}
+.dlgMsg{  //买家信息 卖家信息
+    width: 3rem;
+    height: 2.5rem;
+    background-color: white;
+    border-radius: .05rem;
+    margin-left: -1.5rem;
+    margin-top: -1.25rem;
+    .btn_close{
+        top: .1rem;
+        right: .05rem;
+    }
+    ul{
+        flex-direction: column;
+        li{
+            flex-grow: 1;
+            line-height: .3rem;
         }
     }
 }

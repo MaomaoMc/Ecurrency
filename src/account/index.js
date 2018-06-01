@@ -10,12 +10,6 @@ import SystemNotice from './SystemNotice';
 import SystemSet from './SystemSet';
 import WeChat from './WeChat';
 import AboutJsd from './AboutJsd';
-import OilCard from './OilCard';
-import ExChangeYtf from './ExChangeYtf';
-import SwMarket from './SwMarket';
-import RobPacket from './RobPacket';
-import LuckDial from './LuckDial';
-import Lottery from './Lottery';
 import Certify from './Certify';
 import ShuaCertify from './ShuaCertify';
 import ChangePwd from './ChangePwd';
@@ -26,7 +20,10 @@ import ForgetPwd from './ForgetPwd';
 import NounExplain from './NounExplain';
 import Feedback from './Feedback';
 import MyMineral from './MyMineral';
+import SwMarket from './SwMarket';
+import RobPacket from './RobPacket';
 import Invite from './Invite';
+import SysNoticeDetail from './SysNoticeDetail';
 
 class Account extends Component {
     render(){
@@ -36,21 +33,17 @@ class Account extends Component {
                 <Route path="/account/personalData" component = {PersonalData} />
                 <Route path="/account/invite" component = {Invite} />
                 <Route path="/account/myMineral" component = {MyMineral} />
-                {/* <Route path="/account/setHead" component = {SetHead} /> */}
+                <Route path="/account/swMarket" component = {SwMarket} />
+                <Route path="/account/robPacket" component = {RobPacket} />
                 <Route path="/account/bill" component = {Bill} />
                 <Route path="/account/service" component = {ClientService} />
+                <Route path="/account/systemNoticeDetail" component = {SysNoticeDetail} />
                 <Route path="/account/systemNotice" component = {SystemNotice} />
                 <Route path="/account/systemSet/about" component = {AboutJsd} />
                 <Route path="/account/systemSet/nounExplain" component = {NounExplain} />
                 <Route path="/account/systemSet/feedback" component = {Feedback} />
                 <Route path="/account/systemSet/wechat" component = {WeChat} />
                 <Route path="/account/systemSet" component = {SystemSet} />
-                <Route path="/account/oilCard" component = {OilCard} />
-                <Route path="/account/exchangeYtf" component = {ExChangeYtf} />
-                <Route path="/account/swMarket" component = {SwMarket} />
-                <Route path="/account/robPacket" component = {RobPacket} />
-                <Route path="/account/luckDial" component = {LuckDial} />
-                <Route path="/account/lottery" component = {Lottery} />
                 <Route path="/account/creditCertify/:type" component = {CreditCertify} />
                 <Route path="/account/certify/:type" component = {Certify} />
                 <Route path="/account/shuaCertify/" component = {ShuaCertify} />

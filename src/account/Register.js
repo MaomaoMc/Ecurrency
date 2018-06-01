@@ -181,7 +181,7 @@ class Register extends Component {
         return <div>
             <Title title="注册页面" code = {this.state.data_code}/>
             <div className="logo"></div>
-            <p className="fc_white fz_30 text_center">创建账户</p>
+            <p className="fz_30 text_center">创建账户</p>
             <div className="primary_form" style={{width: '3.392rem', margin: '0 auto'}}>
                 <input type="text" placeholder="手机号：" value = {this.state.phone} onChange = {e => {
                     this.handleInputChange({type: "phone", value: e.target.value})

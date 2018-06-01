@@ -10,99 +10,90 @@ import Bill from "./Bill";
 import ClientService from "./ClientService";
 import SystemNotice from "./SystemNotice";
 import SystemSet from "./SystemSet";
-import OilCard from "./OilCard";
-import ExChangeYtf from "./ExChangeYtf";
+import MyMineral from "./MyMineral";
+// import ExChangeYtf from "./ExChangeYtf";
 import SwMarket from "./SwMarket";
 import RobPacket from "./RobPacket";
-import LuckDial from "./LuckDial";
-import Lottery from "./Lottery";
+// import LuckDial from "./LuckDial";
+// import Lottery from "./Lottery";
 
 import '../css/css/asset.css';
 const accountMenus = [
     {
-        pic: require("../img/icon_grzl_nor.png"),
-        picActive: require("../img/icon_grzl_hot.png"),
+        pic: require("../img/icon_grzl.png"),
         link: "/account/PersonalData",
         component: PersonalData,
         text: "个人资料"
     },
     {
-        pic: require("../img/icon_wdkj_nor.png"),
-        picActive: require("../img/icon_zdzx_hot.png"),
-        link: "/account/myMineral",
-        component: Bill,
-        text: "我的矿机"
-    },
-    {
-        pic: require("../img/icon_zdzx_nor.png"),
-        picActive: require("../img/icon_zdzx_hot.png"),
+        pic: require("../img/icon_zdzx.png"),
         link: "/account/Bill",
         component: Bill,
         text: "账单中心"
     },
     {
-        pic: require("../img/icon_kfzx_nor.png"),
-        picActive: require("../img/icon_kfzx_hot.png"),
+        pic: require("../img/icon_kfzx.png"),
         link: "/account/service",
         component: ClientService,
         text: "客服中心"
     },
     {
-        pic: require("../img/icon_xttz_nor.png"),
-        picActive: require("../img/icon_xttz_hot.png"),
+        pic: require("../img/icon_xttz.png"),
         link: "/account/systemNotice",
         component: SystemNotice,
         text: "系统通知"
     },
     {
-        pic: require("../img/icon_wdzd_nor.png"),
-        picActive: require("../img/icon_wdzd_hot.png"),
+        pic: require("../img/icon_wdzd.png"),
         link: "/mineralPool",
         component: PersonalData,
         text: "我的战队"
     },
     {
-        pic: require("../img/icon_xtss_nor.png"),
-        picActive: require("../img/icon_xtss_hot.png"),
+        pic: require("../img/icon_xtsz.png"),
         link: "/account/systemSet",
         component: SystemSet,
         text: "系统设置"
     },
     {
-        pic: require("../img/icon_ykcz_nor.png"),
-        picActive: require("../img/icon_ykcz_hot.png"),
-        link: "/account/oilCard",
-        component: OilCard,
-        text: "油卡充值"
-    },
-    {
-        pic: require("../img/icon_ytf_nor.png"),
-        picActive: require("../img/icon_ytf_hot.png"),
-        link: "/account/exchangeYtf",
-        component: ExChangeYtf,
-        text: "兑换以太坊"
-    },
-    {
-        pic: require("../img/icon_swsc_nor.png"),
-        picActive: require("../img/icon_swsc_hot.png"),
-        link: "/account/swMarket",
-        component: SwMarket,
-        text: "实物商城"
+        pic: require("../img/icon_wdkj_nor.png"),
+        link: "/account/myMineral",
+        component: MyMineral,
+        text: "我的矿机"
     },
     {
         pic: require("../img/icon_qhb_nor.png"),
-        picActive: require("../img/icon_qhb_hot.png"),
         link: "/account/robPacket",
         component: RobPacket,
-        text: "抢红包"
+        text: "挂红包"
     },
     {
-        pic: require("../img/icon_xuzp_nor.png"),
-        picActive: require("../img/icon_xuzp_hot.png"),
-        link: "/account/luckDial",
-        component: LuckDial,
-        text: "幸运转盘"
+        pic: require("../img/icon_swsc_nor.png"),
+        link: "/account/swMarket",
+        component: SwMarket,
+        text: "商城"
     },
+    // {
+    //     pic: require("../img/icon_ykcz_nor.png"),
+    //     picActive: require("../img/icon_ykcz_hot.png"),
+    //     link: "/account/oilCard",
+    //     component: OilCard,
+    //     text: "油卡充值"
+    // },
+    // {
+    //     pic: require("../img/icon_ytf_nor.png"),
+    //     picActive: require("../img/icon_ytf_hot.png"),
+    //     link: "/account/exchangeYtf",
+    //     component: ExChangeYtf,
+    //     text: "兑换以太坊"
+    // },
+    // {
+    //     pic: require("../img/icon_xuzp_nor.png"),
+    //     picActive: require("../img/icon_xuzp_hot.png"),
+    //     link: "/account/luckDial",
+    //     component: LuckDial,
+    //     text: "幸运转盘"
+    // },
     //刮刮乐先暂时不要  多出一行不好看
     // {
     //     pic: require("../img/icon_ggl_nor.png"),
@@ -165,26 +156,36 @@ class Personal extends Component {
     }
     render (){
         const data = this.state.data;
+        const sundryData = JSON.parse(localStorage.getItem("sundryData"));
         return <div>
             <Title title="个人中心" code = {this.state.code}/>
            <div className="assetTotal">
-            <div style={{height: '100%', padding:  '0 .5rem'}}>
-                <p className="fc_white fz_30 text_center" style={{lineHeight: '.35rem'}}>资产总额</p>
-                <p className="fc_yellow fz_70 text_center" style={{lineHeight: '.75rem'}}>{data.total}</p>
-                <div className="fc_30 fz_30 text_center over_hidden">
-                    <span className="fc_blue f_lt"><span>可用JSD：</span><span className="fc_white">{parseFloat(data.jd_num).toFixed(2)}</span></span>
-                    <span className="fc_blue f_rt"><span>冻结JSD：<span className="fc_white">{parseFloat(data.djd_num).toFixed(2)}</span></span></span>
-                </div>
+            <div className = "text_center">
+                <img src={window.baseUrl + sundryData.adminpic} alt=""/>
             </div>
+            <ul className = "f_flex">
+                <li>
+                    <p className = "fc_blue">{data.money}</p>
+                    <p>账户积分(E币)</p>
+                </li>
+                <li>
+                    <p className = "fc_blue">{data.jd_num}</p>
+                    <p>余额(E币)</p>
+                </li>
+                <li>
+                    <p className = "fc_blue">{data.djd_num}</p>
+                    <p>冻结(E币)</p>
+                </li>
+            </ul>
            </div>
            <div className="account_menus f_flex">
             {
                 accountMenus.map(function(item, i){
-                    return <div className="menus_item mt_40" key={i}>
+                    return <div className="menus_item mt_50" key={i}>
                         <Link to = {item.link}>
                             <span className="icon" style={{backgroundImage: "url(" + item.pic + ")"}} activestyle={{backgroundImage: "url(" + item.picActive + ")"}}></span>
                         </Link>
-                        <div className="text fc_white fz_26 mt_10">{item.text}</div>
+                        <div className="text fz_26 mt_10">{item.text}</div>
                     </div>
                 })
             }

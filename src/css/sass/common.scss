@@ -13,6 +13,8 @@ html{
     // box-sizing: border-box;
 }
 body{
+    background-color: #f6f6fb;
+    color: #666666;
     padding-top: .45rem;
     padding-bottom: .5rem;
     font-family: Arial, sans-serif;
@@ -97,6 +99,9 @@ ul li{
 .fz_32{
     font-size: .16rem;
 }
+.fz_50 {
+    font-size: .25rem;
+}
 .fz_60{
     font-size: .3rem;
 }
@@ -105,7 +110,7 @@ ul li{
 }
 /*颜色21232*/
 .fc_blue{  
-    color: #00a8ff;
+    color: #445ecd;
 }
 .fc_white{
     color: white;
@@ -171,13 +176,27 @@ ul li{
 .ml_40{
     margin-left: .2rem;
 }
+.pb_100{
+    padding-bottom: .5rem;
+}
 /*border*/
 .b_blue1{
-    border: .01rem solid #00a8ff;  //ie 安卓 1px 的border显示不出来
+    border: .01rem solid #3c82ff;  //ie 安卓 1px 的border显示不出来
 }
 // /*表单3*/
 input{
     background-color: transparent;
+    // appearance: none;
+    // -webkit-appearance: none;
+}
+a, input, *{
+    -webkit-tap-highlight-color: white !important;
+    -webkit-focus-ring-color: white !important;
+    outline: none !important;
+    text-decoration: none;
+}
+input, button, select, textarea{
+    resize: none;
 }
 input[type="radio"]{
     width: .215rem;
@@ -189,26 +208,27 @@ span.btn{
     text-align: center;
 }
 .btn_default{
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, .5);
     color:white;
-    border-color: rgba(255, 255, 255, .5);
+    border-color: rgba(0, 0, 0, .5);
     border-radius: .025rem;
 }
 .btn_primary, .register_btn:hover{
-    background-color: #00a8ff;
-    color:white;
-    border-color: #00a8ff;
-    border-radius: .025rem;
+    background-color: #3c82ff;
+    color: white;
+    text-align: center;
+    font-size: .15rem;
+    border-color: #3c82ff;
+    border-radius: .05rem;
+    // padding: .075rem .4rem;
 }
 .btn_orange{
     background-color: #f26c00;
     color: white;
-    width: 1.08rem;
-    height: .28rem;
-    line-height: .28rem;
     text-align: center;
     font-size: .15rem;
-    border-radius: .14rem;
+    border-radius: .2rem;
+    padding: .075rem .4rem;
 }
 .btn_confirm, .btn_cancel{
 
@@ -232,8 +252,8 @@ span.btn{
     font-size: .15rem;
     text-align: center;
     color: white;
-    background-color: #031d59;
-    border-bottom: .01rem solid #00a8ff;
+    background-color: #3c82ff;
+    border-bottom: .01rem solid #3c82ff;
     position: fixed;
     top: 0;
     left: 0;

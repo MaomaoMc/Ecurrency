@@ -14,7 +14,6 @@ import DealRecords from './DealRecords';
 class Deal extends Component {
     render() {
         const hash = window.location.hash;
-        console.log(hash)
         return <div style={{ marginBottom: '1rem' }}>
             <Title title="交易" />
             {hash.search(/guadan/) === -1 ? <PriceItem /> : null}

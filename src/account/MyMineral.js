@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
 import Title from '../Title';
 import WarningDlg from '../WarningDlg';
 
 const baseUrl = window.baseUrl;
-// const token = localStorage.getItem("token");
-// console.log(token, 'tokentoken')
 class MyMineral extends Component  {
     constructor (props){
         super(props);
@@ -82,8 +79,7 @@ class MyMineral extends Component  {
         const self = this;
         return <div>
             <Title title = "我的矿机" code = {this.state.code}/>
-            {/* <div className = "myMineralUl"> */}
-                <ul className = "myMineralUl f_flex fz_20 fc_white">
+                <ul className = "myMineralUl f_flex fz_20">
                     {data.length > 0 && data.map(function(item, i){
                         const mill = item.mill;
                         const status_msg = item.status_msg;
@@ -103,7 +99,6 @@ class MyMineral extends Component  {
                         </li>
                     })}
                 </ul>
-            {/* </div> */}
             {this.state.warningDlgShow ? <WarningDlg text = {this.state.warningDlgtext}/> : null}
         </div>
     }

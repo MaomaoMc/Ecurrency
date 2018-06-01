@@ -59,7 +59,7 @@ class AliPayBind extends Component{
             <Title title="支付宝绑定" code = {this.state.code}/>
             <div className="account_form fz_26">
                 <div>
-                    <label className="fc_white">账号：</label>
+                    <label>账号：</label>
                     <input type="text" name="" placeholder="请输入支付宝账号" value = {this.state.zfb_num}
                     onChange = {e => {
                         this.handleInputChange({type: "zfb_num", val: e.target.value})

@@ -59,7 +59,7 @@ class WeChatBind extends Component{
             <Title title="微信绑定" code = {this.state.code}/>
             <div className="account_form fz_26">
                 <div>
-                    <label className="fc_white">账号：</label>
+                    <label>账号：</label>
                     <input type="text" name="" placeholder="请输入微信账号" value = {this.state.wx_num}
                     onChange = {e => {
                         this.handleInputChange({type: "wx_num", val: e.target.value})

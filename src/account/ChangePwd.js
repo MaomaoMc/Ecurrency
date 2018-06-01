@@ -24,7 +24,7 @@ class ChangePwd extends Component {
             title: title,
             code: "",
             warningDlgShow: false,
-            warningDlgText: ""
+            warningText: ""
         }
     }
     handleInputChange (e){  //input change event
@@ -51,7 +51,7 @@ class ChangePwd extends Component {
             if(value.length < 6){
                 this.setState({
                     warningDlgShow: true,
-                    warningDlgText: "交易密码不能小于6位"
+                    warningText: "交易密码不能小于6位"
                 }, function(){
                     this.hanleWarningDlgTimer()
                 })
@@ -61,7 +61,7 @@ class ChangePwd extends Component {
         if(!(/^[A-Za-z0-9]+$/.test(value))){  //密码只能是6位数 的字母加数字
             this.setState({
                 warningDlgShow: true,
-                warningDlgText: "密码只能是字母或数字组成"
+                warningText: "密码只能是字母或数字组成"
             }, function(){
                 this.hanleWarningDlgTimer()
             })
@@ -98,7 +98,7 @@ class ChangePwd extends Component {
             <Title title={this.state.title} code = {this.state.code} />
             <div className="account_form fz_26">
                 <div>
-                    <label className="fc_white">旧密码：</label>
+                    <label>旧密码：</label>
                     <input type="password" name="" maxLength = {type === "2" ? "6" : ""} placeholder="请输入旧密码" value = {this.state.oldpass}
                     onChange = {e => {
                         this.handleInputChange({type: "oldpass", val: e.target.value})
@@ -108,7 +108,7 @@ class ChangePwd extends Component {
                     />
                 </div>
                 <div>
-                    <label className="fc_white">新密码：</label>
+                    <label>新密码：</label>
                     <input type="password" placeholder="请输入新密码" maxLength = {type === "2" ? "6" : ""} value = {this.state.pass}
                     onChange = {e => {
                         this.handleInputChange({type: "pass", val: e.target.value})
@@ -118,7 +118,7 @@ class ChangePwd extends Component {
                     />
                 </div>
                 <div>
-                    <label className="fc_white">重复密码：</label>
+                    <label>重复密码：</label>
                     <input type="password" placeholder="请确认新密码" maxLength = {type === "2" ? "6" : ""} value = {this.state.repass} 
                     onChange = {e => {
                         this.handleInputChange({type: "repass", val: e.target.value})
@@ -133,7 +133,7 @@ class ChangePwd extends Component {
                         this.submit({})
                     }}>提交</span>
             </div>
-            {this.state.warningDlgShow ? <WarningDlg text = {this.state.warningDlgText} /> : null}
+            {this.state.warningDlgShow ? <WarningDlg text = {this.state.warningText} /> : null}
         </div>
     }
 }
