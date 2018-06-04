@@ -351,25 +351,50 @@ input.czAmount {
     right: .1rem; }
 
 /*我的矿机*/
-ul.myMineralUl {
-  flex-direction: column;
-  padding: .15rem; }
-  ul.myMineralUl li {
+ul.myMineralData {
+  flex-direction: row;
+  margin-top: .2rem; }
+  ul.myMineralData li {
     flex-grow: 1;
-    background-color: white;
-    padding: .2rem;
-    margin-bottom: .15rem;
+    text-align: center;
+    line-height: .3rem; }
+    ul.myMineralData li p.fz_50 {
+      color: #fda100; }
+
+ul.mineralTabs {
+  flex-direction: row;
+  width: 70%;
+  border: .01rem solid #3c82ff;
+  border-radius: .05rem;
+  margin: .3rem auto; }
+  ul.mineralTabs li {
+    flex-grow: 1;
+    font-size: .16rem;
+    text-align: center;
+    height: .4rem;
+    line-height: .4rem; }
+
+.normal_table {
+  border-collapse: collapse;
+  width: 100%; }
+  .normal_table thead tr th {
+    font-size: .16rem;
+    line-height: .6rem;
+    border-bottom: 0.01rem solid #dddddd; }
+  .normal_table tr td {
+    font-size: .12rem;
+    text-align: center;
+    padding: .1rem;
+    border-bottom: 0.01rem solid #dddddd;
     position: relative; }
-    ul.myMineralUl li p span {
-      margin-right: .05rem; }
-    ul.myMineralUl li span.btn {
+    .normal_table tr td span.btn {
       display: block;
       padding: .05rem .2rem;
       color: white;
       position: absolute;
-      right: .15rem;
-      bottom: .25rem; }
-    ul.myMineralUl li span.btn.active {
+      right: .04rem;
+      bottom: .04rem; }
+    .normal_table tr td span.btn.active {
       color: white;
       border: .01rem solid #fda100;
       border-radius: .12rem;

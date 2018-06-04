@@ -409,35 +409,65 @@ input.czAmount{  /*充值金额*/
     }
 }
 /*我的矿机*/
-ul.myMineralUl{
-    flex-direction: column;
-    padding: .15rem;
+ul.myMineralData{
+    flex-direction: row;
+    margin-top: .2rem;
     li{
         flex-grow: 1;
-        // border: .01rem solid #3c82ff;
-        // border-radius: .05rem;
-        background-color: white;
-        padding: .2rem;
-        margin-bottom: .15rem;
-        position: relative;
-        p{
-            span{
-                margin-right: .05rem;
+        text-align: center;
+        line-height: .3rem;
+        p.fz_50{
+            color: #fda100;
+        }
+    }
+}
+ul.mineralTabs{
+    flex-direction: row;
+    width: 70%;
+    border: .01rem solid #3c82ff;
+    border-radius: .05rem;
+    margin: .3rem auto;
+    li{
+        flex-grow: 1;
+        font-size: .16rem;
+        text-align: center;
+        height: .4rem;
+        line-height: .4rem;
+    }
+}
+.normal_table{
+    border-collapse: collapse;
+    width: 100%;
+    thead{
+        tr{
+            th{
+                font-size: .16rem;
+                line-height: .6rem;
+                border-bottom: .01rem solid rgb(221, 221, 221)
             }
         }
-        span.btn{
-            display: block;
-            padding: .05rem .2rem;
-            color: white;
-            position: absolute;
-            right: .15rem;
-            bottom: .25rem;
-        }
-        span.btn.active{
-            color: white;
-            border: .01rem solid #fda100;
-            border-radius: .12rem;
-            background-color: #fda100;
+    }
+    tr{
+        td{
+            font-size: .12rem;
+            text-align: center;
+            padding: .1rem;
+            border-bottom: .01rem solid rgb(221, 221, 221);
+            position: relative;
+            span.btn{
+                display: block;
+                padding: .05rem .2rem;
+                color: white;
+                position: absolute;
+                right: .04rem;
+                bottom: .04rem;
+            }
+            span.btn.active{
+                color: white;
+                border: .01rem solid #fda100;
+                border-radius: .12rem;
+                background-color: #fda100;
+            }
         }
     }
 }
