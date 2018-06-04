@@ -1,4 +1,13 @@
 
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+
 .DS_Store
 build/static/media/pic_morentx.d09372f2.png
 build/service-worker.js

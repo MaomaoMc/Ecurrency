@@ -169,6 +169,33 @@ class MachineM extends Component {
         return <div>
             <Title  title="机市" code = {this.state.code}/>
             <div className = "pb_100" style = {{marginBottom: ".2rem"}}>
+                <p style = {{fontSize: ".2rem", fontWeight: 600, textIndent: ".2rem", margin: ".1rem 0"}}>积分矿机</p>
+                <div>
+                {
+                    jfData.length > 0 && jfData.map(function (item, i) {
+                        return <div key={i} className="item">
+                            <div className="goodPic f_lt" style={{backgroundImage: "url(" + baseUrl + item.pic + ")"}}></div>
+                            <div className="goodItem f_lt">
+                                <h6 className="fz_30">{item.name}</h6>
+                                <div>
+                                    <div className="f_lt fz_22">
+                                        <p>算力：{item.force}</p>
+                                        <p>运行周期：{item.time}</p>
+                                        <p>收益总量：{item.earning}</p>
+                                    </div>
+                                    <div className="cart fz_26" onClick = { e => {
+                                            self.handleJfBayEvent({id: item.id})
+                                        }}>
+                                        <i className="cart_icon"></i>
+                                    <span> {item.money} 积分</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    })
+                }
+                </div>
+                <p style = {{fontSize: ".2rem", fontWeight: 600, textIndent: ".2rem", margin: ".1rem 0"}}>矿机列表</p>
                 {
                      data.length > 0 && data.map(function (item, i) {
                         return <div key={i} className="item">
@@ -192,32 +219,7 @@ class MachineM extends Component {
                         </div>
                     })
                 }
-                <p style = {{fontSize: ".2rem", fontWeight: 600, textIndent: ".2rem", margin: ".1rem 0"}}>积分矿机</p>
-                <div style = {{}}>
-                {
-                     jfData.length > 0 && jfData.map(function (item, i) {
-                        return <div key={i} className="item">
-                            <div className="goodPic f_lt" style={{backgroundImage: "url(" + baseUrl + item.pic + ")"}}></div>
-                            <div className="goodItem f_lt">
-                                <h6 className="fz_30">{item.name}</h6>
-                                <div>
-                                    <div className="f_lt fz_22">
-                                        <p>算力：{item.force}</p>
-                                        <p>运行周期：{item.time}</p>
-                                        <p>收益总量：{item.earning}</p>
-                                    </div>
-                                    <div className="cart fz_26" onClick = { e => {
-                                            self.handleJfBayEvent({id: item.id})
-                                        }}>
-                                        <i className="cart_icon"></i>
-                                       <span> {item.money} 积分</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    })
-                }
-                </div>
+                
             </div>
             {this.state.jf_poor ? <div style = {{width: "2.5rem", height: "2.3rem", backgroundColor: "white", position: "fixed", top: "50%", left: "50%",
             marginTop: "-1rem", marginLeft: "-1rem",zIndex: 100}}>
