@@ -176,7 +176,8 @@ class MachineM extends Component {
                         return <div key={i} className="item">
                             <div className="goodPic f_lt" style={{backgroundImage: "url(" + baseUrl + item.pic + ")"}}></div>
                             <div className="goodItem f_lt">
-                                <h6 className="fz_30">{item.name}</h6>
+                                <h6 className="fz_30">{item.name}&nbsp;&nbsp;<span className = "fz_26" style = {{color: "rgba(0, 0, 0, 0.4)", fontWeight: "normal"}}>剩余数：{item.num}</span></h6>
+                                
                                 <div>
                                     <div className="f_lt fz_22">
                                         <p>算力：{item.force}</p>
