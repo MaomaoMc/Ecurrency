@@ -454,9 +454,10 @@ ul.mineralTabs{
             padding: .1rem;
             border-bottom: .01rem solid rgb(221, 221, 221);
             position: relative;
+            white-space: nowrap;  
             span.btn{
                 display: block;
-                padding: .05rem .2rem;
+                padding: .05rem .1rem;
                 color: white;
                 position: absolute;
                 right: .04rem;

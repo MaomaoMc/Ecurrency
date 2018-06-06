@@ -386,10 +386,11 @@ ul.mineralTabs {
     text-align: center;
     padding: .1rem;
     border-bottom: 0.01rem solid #dddddd;
-    position: relative; }
+    position: relative;
+    white-space: nowrap; }
     .normal_table tr td span.btn {
       display: block;
-      padding: .05rem .2rem;
+      padding: .05rem .1rem;
       color: white;
       position: absolute;
       right: .04rem;

@@ -174,8 +174,7 @@ class MyMineral extends Component  {
                                     <td>{mill.name}</td>
                                     <td>{item.ytime}/{mill.time}</td>
                                     <td>{mill.force}</td>
-                                    <td>{item.money}</td>
-                                    <td> {status_msg === "未使用" ?
+                                    <td>{item.money}</td><td> {status_msg === "未使用" ?
                                         <span className = "btn active" 
                                         onClick = {e => {
                                             self.handleUseMill({id: item.id})
