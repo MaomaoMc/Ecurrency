@@ -118,7 +118,7 @@ class Ptp extends Component {
                         />
                     </li>
                 </ul>
-                <p className="fz_18 fc_blue mt_10">*交易手续费20%；如转入100JSD，系统将扣120JSD。</p>
+                <p className="fz_18 fc_blue mt_10">*交易手续费20%；如转入100E币，系统将扣120E币。</p>
                 <span className="btn btn_primary" style = {{height: ".35rem", lineHeight: ".35rem", width: "1.5rem",
                  display: "block", margin: ".2rem auto"}}
                 onClick = {e => {
