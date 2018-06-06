@@ -197,7 +197,7 @@ class OilCard extends Component{
                     </span>
                 </li>
                 <li>
-                    <span className="f_lt fc_blue">请输入充值JSD<span className="fc_gray fz_24">（最低额度100JSD）</span></span>
+                    <span className="f_lt fc_blue">请输入充值E币<span className="fc_gray fz_24">（最低额度100E币）</span></span>
                     <span className="f_rt">
                         <input className="czAmount" type="text" value={this.state.jd_num} 
                         onChange = {e => {

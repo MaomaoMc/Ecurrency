@@ -13,7 +13,7 @@ class ClientService extends Component{
             <div className="clientService fc_blue fz_24">
                 <p>
                     <img className="wechat" src={wechat} alt=""></img>
-                    <span>JSD微信官方客服：</span>
+                    <span>E币微信官方客服：</span>
                 </p>
                 <img className="weChatgzh" src={window.baseUrl + wx_pic} alt=""/>
                 <p>

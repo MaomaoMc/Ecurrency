@@ -209,7 +209,7 @@ class DealRecords extends Component {
                                     <p className = "fz_20 over_hidden"><span className = "f_lt fc_blue">单号 ：{record.trade_num}</span>
                                         <span className = "f_rt">{status_msg}</span></p>
                                     <p className = "fz_20">{type === 1 ? "卖家ID ：" + record.sell_msg : "买家ID：" + record.buy_msg}</p>
-                                    <p className = "fz_20">挂卖{record.num}JSD，单价{record.price}元</p>
+                                    <p className = "fz_20">挂卖{record.num}E币，单价{record.price}元</p>
                                     <p className = "fz_20">总价{parseFloat(record.num * record.price).toFixed(2)}</p>
                                 </a>
                                 {type === 1 && status_msg === "已付币" ? <span className="btn fz_20" onClick = { e => {

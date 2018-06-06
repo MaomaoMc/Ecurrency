@@ -262,7 +262,7 @@ class GuaDan extends Component {
                     <div className="tip fz_26">{this.state.tip}</div>
                     <p style={{ lineHeight: '.5rem' }}><span className="fz_30">当前价：</span>
                         <span className = "fc_blue" style={{ fontSize: '.35rem' }}>{this.state.newPrice}</span>
-                        <span className="fz_30">&nbsp;E币</span>
+                        <span className="fz_30">&nbsp;CNY</span>
                     </p>
                     <div className="price_adjust fz_26 mb_20">
                         <div className="unit_price">
@@ -292,7 +292,7 @@ class GuaDan extends Component {
                             }}
 
                         />
-                        <p className="fc_blue fz_26">买入{count}JSD，出价{this.state.price}，总价{Math.round(parseFloat(count * this.state.price) * 100) / 100}元</p>
+                        <p className="fc_blue fz_26">买入{count}E币，出价{this.state.price}，总价{Math.round(parseFloat(count * this.state.price) * 100) / 100}元</p>
                         <span className="btn" style={{ margin: '.1rem auto' }}
                             onClick={e => {
                                 this.handleBuyJd()

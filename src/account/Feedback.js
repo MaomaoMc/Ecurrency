@@ -92,7 +92,7 @@ class Feedback extends Component{
                <div>
                <textarea name="" id="" cols="30" rows="10" style={{
                    backgroundColor: "transparent"
-               }} placeholder = "请输入您对JSD的意见或建议：" value = {this.state.problem} onChange = {e => {
+               }} placeholder = "请输入您对E币的意见或建议：" value = {this.state.problem} onChange = {e => {
                    this.setState({
                     problem: e.target.value
                    })

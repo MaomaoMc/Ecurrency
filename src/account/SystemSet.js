@@ -26,7 +26,7 @@ class SystemSet extends Component{
             <ul className="lists f_flex fz_26" style={{marginTop: 0}}>
                 <li>
                     <Link to="/account/systemSet/about">
-                        <span className="f_lt">关于JSD</span>
+                        <span className="f_lt">关于E币</span>
                         <span className="f_rt">></span>
                     </Link>
                 </li>
@@ -46,7 +46,7 @@ class SystemSet extends Component{
                     <Link to="/account/systemSet/wechat">
                         <span className="f_lt">微信客服</span>
                         <span className="f_rt">
-                            <span>J_SD</span>
+                            <span>E币</span>
                         </span>
                     </Link>
                 </li>
