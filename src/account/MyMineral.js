@@ -24,7 +24,9 @@ class MyMineral extends Component  {
                 nhuw: "0"  //个人产量
             },
             data: [],
-            type: "myMillList",  //进行中的 
+            mymill_data: [],  //我的矿机进行中的数据
+            over_data: [], //我过期矿机数据
+            tabIndex: 0,  //进行中的 
             code: "",
             warningDlgShow: false,
             warningDlgtext: "",
@@ -44,10 +46,31 @@ class MyMineral extends Component  {
             }
         , 1000)
     }
-    
+    myOverAjax(){
+        const self = this;
+        axios.post(baseUrl + "/home/Index/myoverdueMillList", qs.stringify({
+            token: localStorage.getItem("token")
+        })).then(function(res){
+            const data = res.data;
+            const code = data.code;
+            if(code !== 1){  //失败的话
+                self.setState({
+                    warningDlgShow: true,
+                    warningDlgtext: data.msg,
+                    code: code
+                }, function(){
+                    self.hanleWarningDlgTimer();
+                })
+            }else{
+                self.setState({
+                    over_data: data.data
+                })
+            }
+        })
+    }
     ajax (){
         const self = this;
-        axios.post(baseUrl + "/home/Index/" + self.state.type, qs.stringify({
+        axios.post(baseUrl + "/home/Index/myMillList", qs.stringify({
             token: localStorage.getItem("token")
         })).then(function(res){
             const data = res.data;
@@ -60,19 +83,14 @@ class MyMineral extends Component  {
                     self.hanleWarningDlgTimer();
                 })
             }else{
-                if(self.state.type === "myMillList"){  // 个人算力 个人产量始终在第一个接口里面 切换的时候不会再改变的
-                    self.setState({
-                        my_data: {
-                            myforce: data.myforce,
-                            nhuw: data.nhuw
-                        },
-                        data: data.data
-                    })
-                }else{
-                    self.setState({
-                        data: data.data
-                    })
-                }
+                self.setState({
+                    my_data: { // 个人算力 个人产量始终在第一个接口里面 切换的时候不会再改变的
+                        myforce: data.myforce,
+                        nhuw: data.nhuw
+                    },
+                    data: data.data,
+                    mymill_data: data.data
+                })
             }
             self.setState({
                 code: code
@@ -98,12 +116,15 @@ class MyMineral extends Component  {
     }
     componentDidMount (){
         this.ajax();  //获取矿机数据
+        this.myOverAjax();  //过期获取矿机数据
     }
     render (){
         const data = this.state.data;
+        const over_data = this.state.over_data;
         const my_data = this.state.my_data;
         const self = this;
         const type = this.state.type;
+        console.log(self.state.mymill_data, over_data, ' vself.state.mymill_data')
         return <div>
             <Title title = "我的矿机" code = {this.state.code}/>
                 <ul className = "myMineralData f_flex">
@@ -119,14 +140,17 @@ class MyMineral extends Component  {
                 <ul className = "deal_tab f_flex fz_30" style = {{marginTop: ".3rem"}}>
                     {
                         tabs.map(function(tab, i){
-                            return <li key = {i} className = {self.state.type === tab.type ? "active" : ""} onClick = {e => {
+                            const tabIndex = self.state.tabIndex;
+                            return <li key = {i} className = {tabIndex === i ? "active" : ""} onClick = {e => {
                                 self.setState({
-                                    type: tab.type
+                                    tabIndex: i
                                 }, function(){
-                                    self.ajax()
+                                    self.setState({
+                                        data: self.state.tabIndex === 0 ? self.state.mymill_data : over_data
+                                    })
                                 })
                             }}>
-                                <a>{tab.text}({data.length})</a>
+                                <a>{tab.text}({i === 0 ? self.state.mymill_data.length : over_data.length})</a>
                             </li>
                         })
                     }
