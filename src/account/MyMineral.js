@@ -148,8 +148,8 @@ class MyMineral extends Component  {
                                 const status_msg = item.status_msg;
                                 return <tr key = {i}>
                                     <td>{mill.name}</td>
-                                    <td>{data.ytime}</td>
-                                    <td>{data.force}</td>
+                                    <td>{item.ytime}/{mill.time}</td>
+                                    <td>{mill.force}</td>
                                     <td>{item.money}</td>
                                     <td> {status_msg === "未使用" ?
                                         <span className = "btn active" 
