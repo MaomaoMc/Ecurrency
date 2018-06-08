@@ -62,7 +62,7 @@ class PriceItem extends Component {
         return <div className="priceItems f_flex">
             <div className="price">
                 <span style={{fontSize: ".35rem"}}>{data.newPrice}</span>
-                <span className="fz_30">E币</span>
+                <span className="fz_30">&nbsp;CNY</span>
             </div>
             <div className="items fz_30">
                 <p>高：{data.topPrice}</p>

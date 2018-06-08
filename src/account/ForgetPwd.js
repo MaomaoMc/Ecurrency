@@ -40,7 +40,7 @@ class ForgetPwd extends Component {
                 self.setState({
                     warningDlgShow: false
                 }, function(){
-                    if(obj && obj.code === 1){ //注册成功
+                    if(obj && obj.code === 1){ //成功
                         window.history.back();
                     }
                 })
