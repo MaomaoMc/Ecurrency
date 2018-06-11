@@ -256,7 +256,7 @@ class GuaDan extends Component {
             }
         ];
         return <div>
-            <Title title={this.state.page_type === "1" ? "新手挂单区" : "高手挂单区"} code = {this.state.code}/>
+            <Title title={this.state.page_type === "1" ? "普通挂单区" : "溢价挂单区"} code = {this.state.code}/>
             <div style={{ marginBottom: ".4rem" }}>
                 <div className="guadanItems">
                     <div className="tip fz_26">{this.state.tip}</div>
