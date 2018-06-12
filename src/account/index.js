@@ -54,6 +54,7 @@ class Account extends Component {
                 <Route path="/account/forgetTradePwd" component = {ForgetPwd} />
                 <Route path="/account/weChatBind" component = {WeChatBind} />
                 <Route path="/account/aliPayBind" component = {AliPayBind} />
+                <Route path="/account/login" component = {Login} />
                 <Route path="/" component = {localStorage.getItem("logined") === "true" ? Personal : Login} />
             </Switch>
         </div>

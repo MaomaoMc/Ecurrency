@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
 import Title from '../Title';
@@ -21,6 +21,7 @@ class Register extends Component {
             t_pass: "",  //交易密码
             rt_pass: "",  //重复交易密码
             tui_id: tui_id, //推荐人ID
+            registered: false,
             data_code: "", //接口返回的code  例如10002  1 等
             countDown: 60,
             warningDlgShow: false,
@@ -49,7 +50,10 @@ class Register extends Component {
                     warningDlgShow: false
                 }, function(){
                     if(obj && obj.code === 1){ //注册成功
-                        window.history.back();
+                        window.tokenLoseFun();
+                        self.setState({
+                            registered: true
+                        })
                     }
                 })
             }
@@ -138,6 +142,9 @@ class Register extends Component {
         }
     }
     register () {  //注册
+        if(this.state.registered){  //防止二次点击
+            return;
+        }
         const self = this;
         const phone = this.state.phone;
         const code = this.state.code;
@@ -178,6 +185,9 @@ class Register extends Component {
     }
     render (){
         const countDown = this.state.countDown;
+        if(this.state.registered){
+            return <Redirect to = "/"/>
+        }
         return <div>
             <Title title="注册页面" code = {this.state.data_code}/>
             <div className="logo"></div>
